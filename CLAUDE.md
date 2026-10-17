@@ -65,6 +65,6 @@ CI (`.github/workflows/deploy.yml`) runs audit, format:check, lint, typecheck, c
 
 ## Deployment and submission rules
 
-- GitHub Pages via Actions at `haq-se.programmersingh.dev` (`public/CNAME`). The base path comes from `VITE_BASE`.
+- GitHub Pages via Actions at `haqse.programmersingh.dev` (custom domain set in the repo's Pages settings; `public/CNAME` mirrors it). Builds use base `/`; `VITE_BASE` exists only for a `<user>.github.io/<repo>/` deployment.
 - Commit messages and PR descriptions carry no AI attribution: no `Co-Authored-By` trailer and no "Generated with" line.
 - Hard gates: repo under 10 MB, **single `main` branch only** (commit directly to `main`; no feature branches pushed), public, no secrets, at most 3 submission attempts. See PRD §11.
