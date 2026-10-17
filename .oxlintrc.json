@@ -1,13 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "typescript",
-    "oxc",
-    "import",
-    "vitest"
-  ],
+  "plugins": ["react", "jsx-a11y", "typescript", "oxc", "import", "vitest"],
   "categories": {
     "correctness": "error",
     "suspicious": "warn"
@@ -28,10 +21,7 @@
     "no-console": [
       "warn",
       {
-        "allow": [
-          "warn",
-          "error"
-        ]
+        "allow": ["warn", "error"]
       }
     ],
     "eqeqeq": "error",
@@ -48,19 +38,13 @@
   ],
   "overrides": [
     {
-      "files": [
-        "**/*.test.ts",
-        "**/*.test.tsx",
-        "src/test/**"
-      ],
+      "files": ["**/*.test.ts", "**/*.test.tsx", "src/test/**"],
       "rules": {
         "typescript/no-non-null-assertion": "off"
       }
     },
     {
-      "files": [
-        "scripts/**"
-      ],
+      "files": ["scripts/**"],
       "rules": {
         "no-console": "off"
       }
