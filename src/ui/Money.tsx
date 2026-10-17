@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { formatINR, localeFor } from '@/lib/utils/money'
 import { cx } from './cx'
 

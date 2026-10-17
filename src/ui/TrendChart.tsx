@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { TrendPoint } from '@/lib/rules/ledger'
 import { formatDate } from '@/lib/utils/date'
 import { localeFor } from '@/lib/utils/money'

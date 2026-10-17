@@ -1,5 +1,6 @@
 import { defaultSettings, type Settings } from '../../schemas/settings'
 import { db } from '../dexie'
+import { writeOnboardedHint } from '../hints'
 
 export async function getSettings(): Promise<Settings> {
   return (await db.settings.get('app')) ?? defaultSettings()
@@ -8,6 +9,7 @@ export async function getSettings(): Promise<Settings> {
 export async function updateSettings(patch: Partial<Omit<Settings, 'id'>>): Promise<void> {
   const current = await getSettings()
   await db.settings.put({ ...current, ...patch, id: 'app' })
+  if (patch.onboarded !== undefined) writeOnboardedHint(patch.onboarded)
 }
 
 /** Removes the key and every key-derived value (model list, chosen model). */

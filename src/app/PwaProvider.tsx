@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { UPDATE_CHECK_INTERVAL_MS } from '@/lib/constants'
 import { usePwa } from '@/stores/pwa'

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useSearchParams } from 'react-router'
 import { useHour, useIncidents, useProfile } from '@/hooks'
 import { shiftContext } from '@/lib/rules/shift'

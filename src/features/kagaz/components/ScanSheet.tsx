@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useAiTask } from '@/hooks'
 import { explainForm, readDocument } from '@/lib/ai/tasks/readDocument'
 import type { DocumentType, Language } from '@/lib/schemas'

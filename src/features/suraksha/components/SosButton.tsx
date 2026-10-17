@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { SOS_HOLD_MS } from '@/lib/constants'
 import { Button, cx, Icon, Sheet } from '@/ui'
 import { SosSheet } from './SosSheet'

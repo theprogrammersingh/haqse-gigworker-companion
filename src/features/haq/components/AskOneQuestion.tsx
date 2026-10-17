@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { Profile, ProfileField } from '@/lib/schemas'
 import { ProfileForm } from '@/features/settings'
 import { Card, Icon } from '@/ui'

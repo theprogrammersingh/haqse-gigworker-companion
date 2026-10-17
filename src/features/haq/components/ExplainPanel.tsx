@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { currentContext, useAiReady, useAiTask } from '@/hooks'
 import { explain } from '@/lib/ai/tasks/explain'
 import type { Language, Scheme } from '@/lib/schemas'

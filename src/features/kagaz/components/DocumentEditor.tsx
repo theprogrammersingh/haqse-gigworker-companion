@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { deleteDocument, putDocument } from '@/lib/db'
 import { EXPIRING_TYPES } from '@/lib/rules/expiry'
 import type { DocumentRecord, DocumentType } from '@/lib/schemas'

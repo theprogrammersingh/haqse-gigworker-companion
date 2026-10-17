@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { BROWSER_NAMES, type Platform } from '@/lib/pwa/platform'
 import { copyText } from '@/lib/utils/share'
 import { toast } from '@/stores/toast'

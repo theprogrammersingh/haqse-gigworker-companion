@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNow } from '@/hooks'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { putIncident } from '@/lib/db'
 import type { IncidentType } from '@/lib/schemas'
 import { INCIDENT_TYPES } from '@/lib/schemas/enums'

@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useRights } from '@/hooks'
 import type { Language } from '@/lib/schemas'
 import { Card, Icon, ReadAloud, Spinner, type IconName } from '@/ui'

@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useParams } from 'react-router'
 import { useDocuments, useProfile, useSchemes, useToday } from '@/hooks'
 import { documentGaps, isApplyBlocked, matchScheme } from '@/lib/rules/eligibility'

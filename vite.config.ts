@@ -57,6 +57,42 @@ function contentSecurityPolicy(): Plugin {
   }
 }
 
+/**
+ * First visits land on /welcome (see main.tsx). Preload that route's chunks with the
+ * entry script, so the router does not discover them only after the entry has run.
+ */
+function preloadFirstRoute(entry = 'src/features/onboarding/index.ts'): Plugin {
+  return {
+    name: 'haqse:preload-first-route',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler(_html, ctx) {
+        const bundle = ctx.bundle
+        if (!bundle) return []
+        const chunks = Object.values(bundle).filter((c) => c.type === 'chunk')
+        const route = chunks.find((c) => c.facadeModuleId?.endsWith(entry))
+        const main = chunks.find((c) => c.isEntry)
+        if (!route || !main) return []
+        const already = new Set([main.fileName, ...main.imports])
+        const files = new Set<string>()
+        const visit = (fileName: string): void => {
+          if (already.has(fileName) || files.has(fileName)) return
+          files.add(fileName)
+          const chunk = bundle[fileName]
+          if (chunk?.type === 'chunk') chunk.imports.forEach(visit)
+        }
+        visit(route.fileName)
+        return [...files].map((file) => ({
+          tag: 'link',
+          attrs: { rel: 'modulepreload', crossorigin: '', href: `${base}${file}` },
+          injectTo: 'head' as const,
+        }))
+      },
+    },
+  }
+}
+
 /** GitHub Pages has no rewrites: serve the SPA shell for unknown paths. */
 function spaFallback(): Plugin {
   let outDir = resolve(import.meta.dirname, 'dist')
@@ -165,6 +201,17 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+        // Precache only what may be needed offline before it is ever used. The Gemini SDK
+        // (online-only by nature), Hindi/Punjabi strings and their script fonts are cached
+        // on first use instead, which keeps the first-visit install download small on 3G.
+        globIgnores: [
+          '**/assets/web-*.js',
+          '**/assets/hi-*.js',
+          '**/assets/pa-*.js',
+          '**/assets/noto-sans-*',
+          '**/assets/devanagari-*.css',
+          '**/assets/gurmukhi-*.css',
+        ],
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
         runtimeCaching: [
@@ -172,10 +219,20 @@ export default defineConfig({
             urlPattern: ({ url }) => url.hostname === 'generativelanguage.googleapis.com',
             handler: 'NetworkOnly',
           },
+          {
+            // Content-hashed files never change, so cache-first is always correct.
+            urlPattern: ({ url, sameOrigin }) => sameOrigin && url.pathname.includes('/assets/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'haqse-lazy-assets',
+              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 90 },
+            },
+          },
         ],
       },
     }),
     contentSecurityPolicy(),
+    preloadFirstRoute(),
     spaFallback(),
   ],
   build: { target: 'es2022', reportCompressedSize: true },

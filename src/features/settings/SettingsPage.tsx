@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { lazy, Suspense, useState } from 'react'
+import { useTranslation } from '@/i18n'
 import { useNavigate } from 'react-router'
 import { useProfile, useSettings, useToday } from '@/hooks'
 import {
@@ -12,14 +12,27 @@ import {
 } from '@/lib/db'
 import type { Theme } from '@/lib/schemas'
 import { downloadText } from '@/lib/utils/share'
-import { ContactsEditor } from '@/features/suraksha'
 import { toast } from '@/stores/toast'
 import { AppStatus } from '@/features/install'
-import { Button, Card, ChipGroup, NumberField, PageHeader, SectionTitle, Sheet } from '@/ui'
+import {
+  Button,
+  Card,
+  ChipGroup,
+  NumberField,
+  PageHeader,
+  SectionTitle,
+  Sheet,
+  Spinner,
+} from '@/ui'
 import { ApiKeyForm } from './components/ApiKeyForm'
 import { LanguagePicker } from './components/LanguagePicker'
 import { ModelPicker } from './components/ModelPicker'
 import { ProfileForm } from './components/ProfileForm'
+
+/** Lazy, so onboarding (which reuses settings components) does not pull in the Safety module. */
+const ContactsEditor = lazy(() =>
+  import('@/features/suraksha').then((m) => ({ default: m.ContactsEditor })),
+)
 
 const THEMES: Theme[] = ['system', 'light', 'dark']
 
@@ -69,7 +82,9 @@ export function SettingsPage() {
 
       <SectionTitle>{t('settings.contacts')}</SectionTitle>
       <Card>
-        <ContactsEditor />
+        <Suspense fallback={<Spinner />}>
+          <ContactsEditor />
+        </Suspense>
       </Card>
 
       <SectionTitle>{t('settings.theme')}</SectionTitle>

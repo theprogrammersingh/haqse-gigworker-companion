@@ -6,7 +6,7 @@ import {
   type SelectHTMLAttributes,
   type TextareaHTMLAttributes,
 } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { canDictate, dictate } from '@/lib/utils/speech'
 import { cx } from './cx'
 import { Icon } from './Icon'

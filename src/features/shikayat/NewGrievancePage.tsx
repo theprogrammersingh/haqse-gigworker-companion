@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useNavigate, useSearchParams } from 'react-router'
 import { useAiReady, useAiTask, useEarnings, useIncidents, useToday } from '@/hooks'
 import { draftGrievance } from '@/lib/ai/tasks/draftGrievance'

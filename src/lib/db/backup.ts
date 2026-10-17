@@ -1,4 +1,5 @@
 import { db } from './dexie'
+import { writeOnboardedHint } from './hints'
 
 /** Everything the user owns, as JSON. The API key is deliberately excluded. */
 export async function exportAll(): Promise<string> {
@@ -29,4 +30,5 @@ export async function exportAll(): Promise<string> {
 /** Wipes every table, including the key and cache (PRD FR-5). */
 export async function deleteAll(): Promise<void> {
   await db.transaction('rw', db.tables, () => Promise.all(db.tables.map((t) => t.clear())))
+  writeOnboardedHint(false)
 }

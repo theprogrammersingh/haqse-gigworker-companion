@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { aiConfig } from '@/lib/ai/config'
 import type { AiConfig } from '@/lib/ai/client'
 import { buildContext, type AiContext } from '@/lib/context/buildContext'

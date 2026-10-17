@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { LANGUAGES, type Language } from '@/lib/schemas/enums'
 import { LANGUAGE_LABELS, setLanguage } from './language'
 import { cx, Icon } from '@/ui'

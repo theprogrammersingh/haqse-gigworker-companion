@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useToasts } from '@/stores/toast'
 import { TONE_STYLES } from './tones'
 import { cx } from './cx'

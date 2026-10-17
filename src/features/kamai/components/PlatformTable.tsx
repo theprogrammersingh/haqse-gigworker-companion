@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { PlatformStats } from '@/lib/rules/ledger'
 import { useMoney } from '@/ui'
 

@@ -1,5 +1,6 @@
 export { db } from './dexie'
 export * from './backup'
+export * from './hints'
 export * from './repositories/aiCache'
 export * from './repositories/earnings'
 export * from './repositories/profile'

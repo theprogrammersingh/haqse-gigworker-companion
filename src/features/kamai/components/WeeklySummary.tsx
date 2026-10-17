@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useAiReady, useAiTask, currentContext, useToday } from '@/hooks'
 import { weeklySummary } from '@/lib/ai/tasks/explain'
 import type { Language } from '@/lib/schemas'

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { Icon, type IconName } from './Icon'
 
 export function Spinner({ label }: { label?: string }) {

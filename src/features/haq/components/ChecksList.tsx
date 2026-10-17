@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { CriterionCheck } from '@/lib/rules/eligibility'
 import { cx, Icon, type IconName } from '@/ui'
 

@@ -1,6 +1,6 @@
 import type { Earning, Platform } from '../schemas'
 import { ANOMALY_RATIO, LOOKBACK_DAYS, MIN_PRIOR_DAYS } from '../constants'
-import { daysBetween } from '../utils/date'
+import { addDays } from '../utils/date'
 import { median, payoutPerHour } from './ledger'
 
 export interface Anomaly {
@@ -23,11 +23,12 @@ export interface Anomaly {
  * of the same platform's previous LOOKBACK_DAYS days. Needs MIN_PRIOR_DAYS of history.
  */
 export function checkAnomaly(entry: Earning, history: readonly Earning[]): Anomaly | null {
+  // ISO dates compare as strings, so the window test allocates no Date objects.
+  const from = addDays(entry.date, -LOOKBACK_DAYS)
   const prior: number[] = []
   for (const h of history) {
-    if (h.id === entry.id || h.platform !== entry.platform) continue
-    const gap = daysBetween(h.date, entry.date)
-    if (gap > 0 && gap <= LOOKBACK_DAYS) prior.push(payoutPerHour(h))
+    if (h.platform !== entry.platform || h.id === entry.id) continue
+    if (h.date < entry.date && h.date >= from) prior.push(payoutPerHour(h))
   }
   if (prior.length < MIN_PRIOR_DAYS) return null
 
@@ -59,11 +60,18 @@ export function findAnomalies(
   dismissed: readonly string[] = [],
 ): Anomaly[] {
   const skip = new Set(dismissed)
+  const windowStart = addDays(today, -(LOOKBACK_DAYS - 1))
+  // One pass to group by platform, so each check scans only its own platform's history.
+  const byPlatform = new Map<Platform, Earning[]>()
+  for (const e of entries) {
+    const list = byPlatform.get(e.platform)
+    if (list) list.push(e)
+    else byPlatform.set(e.platform, [e])
+  }
   const out: Anomaly[] = []
   for (const e of entries) {
-    const age = daysBetween(e.date, today)
-    if (age < 0 || age >= LOOKBACK_DAYS || skip.has(e.id)) continue
-    const a = checkAnomaly(e, entries)
+    if (e.date < windowStart || e.date > today || skip.has(e.id)) continue
+    const a = checkAnomaly(e, byPlatform.get(e.platform) ?? [])
     if (a) out.push(a)
   }
   return out.sort((a, b) => (a.date < b.date ? 1 : -1))

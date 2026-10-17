@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Link, Outlet, ScrollRestoration, useLocation } from 'react-router'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useSettings } from '@/hooks'
 import { useSession } from '@/stores/session'
 import { Icon, Toaster } from '@/ui'

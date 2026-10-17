@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { AiError } from '@/lib/result'
 import { AlertCard } from './Card'
 import { Button, LinkButton } from './Button'

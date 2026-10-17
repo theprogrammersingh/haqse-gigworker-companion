@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { updateProfile } from '@/lib/db'
 import type { Platform, Profile } from '@/lib/schemas'
 import {

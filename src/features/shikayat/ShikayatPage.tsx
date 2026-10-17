@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useGrievances } from '@/hooks'
 import type { GrievanceStatus } from '@/lib/schemas'
 import { formatDateTime } from '@/lib/utils/date'

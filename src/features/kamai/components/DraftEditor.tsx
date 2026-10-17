@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { EarningDraft } from '@/lib/parse/localEarningParser'
 import { PLATFORMS } from '@/lib/schemas/enums'
 import { Money, NumberField, SelectField } from '@/ui'

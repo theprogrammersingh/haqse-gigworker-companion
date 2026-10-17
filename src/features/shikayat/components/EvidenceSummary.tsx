@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import type { GrievanceEvidence } from '@/lib/schemas'
 import { formatDate, formatDateTime } from '@/lib/utils/date'
 import { localeFor } from '@/lib/utils/money'

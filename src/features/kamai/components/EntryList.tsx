@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { addEarnings, deleteEarning } from '@/lib/db'
 import { netOf } from '@/lib/rules/ledger'
 import type { Earning } from '@/lib/schemas'

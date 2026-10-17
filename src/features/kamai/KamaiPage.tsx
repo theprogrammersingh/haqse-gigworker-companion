@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { lazy, Suspense, useState } from 'react'
+import { useTranslation } from '@/i18n'
 import { useSearchParams } from 'react-router'
 import { useLedger, useProfile } from '@/hooks'
 import { hourlyFloor } from '@/lib/rules/lowEarnings'
@@ -8,9 +8,11 @@ import { Button, Card, EmptyState, PageHeader, SectionTitle, Spinner, TrendChart
 import { AnomalyCard } from './components/AnomalyCard'
 import { EntryList } from './components/EntryList'
 import { Insights } from './components/Insights'
-import { LogSheet } from './components/LogSheet'
 import { PlatformTable } from './components/PlatformTable'
 import { WeeklySummary } from './components/WeeklySummary'
+
+/** The log sheet carries the parsers and AI task code; load it only when opened. */
+const LogSheet = lazy(() => import('./components/LogSheet').then((m) => ({ default: m.LogSheet })))
 
 export function KamaiPage() {
   const { t } = useTranslation()
@@ -77,15 +79,17 @@ export function KamaiPage() {
       )}
 
       {sheetOpen && (
-        <LogSheet
-          open
-          initialText={pendingLogText}
-          onClose={() => {
-            setLogOpen(false)
-            setPendingLogText(null)
-            if (fromShortcut) setParams({}, { replace: true })
-          }}
-        />
+        <Suspense fallback={null}>
+          <LogSheet
+            open
+            initialText={pendingLogText}
+            onClose={() => {
+              setLogOpen(false)
+              setPendingLogText(null)
+              if (fromShortcut) setParams({}, { replace: true })
+            }}
+          />
+        </Suspense>
       )}
     </>
   )

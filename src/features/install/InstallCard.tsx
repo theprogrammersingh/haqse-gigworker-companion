@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { usePwa } from '@/stores/pwa'
 import { toast } from '@/stores/toast'
 import { Button, Card, Icon } from '@/ui'

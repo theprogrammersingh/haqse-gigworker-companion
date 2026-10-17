@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useNavigate } from 'react-router'
 import { useProfile, useToday } from '@/hooks'
 import { loadDemoData, updateSettings } from '@/lib/db'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { useSettings } from '@/hooks'
 import { DEFAULT_MODEL, FALLBACK_MODELS, isModelListFresh, listFlashModels } from '@/lib/ai/models'
 import { updateSettings } from '@/lib/db'

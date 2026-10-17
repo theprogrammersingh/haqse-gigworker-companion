@@ -1,5 +1,5 @@
 import { isRouteErrorResponse, useRouteError } from 'react-router'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '@/i18n'
 import { AlertCard, Button, LinkButton } from '@/ui'
 
 /** Per-route error screen: plain words and one way forward, never a stack trace. */
