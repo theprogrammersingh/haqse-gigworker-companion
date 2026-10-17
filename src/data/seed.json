@@ -1,0 +1,258 @@
+{
+  "profile": {
+    "state": "PB",
+    "workType": "delivery",
+    "platforms": ["zomato", "swiggy"],
+    "vehicle": "bike",
+    "ageBand": "18-29",
+    "incomeBand": "upto-15k"
+  },
+  "earnings": [
+    {
+      "dayOffset": -13,
+      "platform": "zomato",
+      "gross": 750,
+      "tips": 10,
+      "fuel": 170,
+      "otherCosts": 0,
+      "hours": 6,
+      "trips": 13
+    },
+    {
+      "dayOffset": -12,
+      "platform": "zomato",
+      "gross": 730,
+      "tips": 20,
+      "fuel": 170,
+      "otherCosts": 40,
+      "hours": 6,
+      "trips": 13
+    },
+    {
+      "dayOffset": -12,
+      "platform": "swiggy",
+      "gross": 340,
+      "tips": 0,
+      "fuel": 80,
+      "otherCosts": 0,
+      "hours": 3,
+      "trips": 7
+    },
+    {
+      "dayOffset": -11,
+      "platform": "zomato",
+      "gross": 950,
+      "tips": 30,
+      "fuel": 220,
+      "otherCosts": 0,
+      "hours": 8,
+      "trips": 18
+    },
+    {
+      "dayOffset": -10,
+      "platform": "zomato",
+      "gross": 860,
+      "tips": 10,
+      "fuel": 200,
+      "otherCosts": 0,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -10,
+      "platform": "swiggy",
+      "gross": 330,
+      "tips": 0,
+      "fuel": 80,
+      "otherCosts": 0,
+      "hours": 3,
+      "trips": 7
+    },
+    {
+      "dayOffset": -9,
+      "platform": "zomato",
+      "gross": 780,
+      "tips": 30,
+      "fuel": 200,
+      "otherCosts": 0,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -8,
+      "platform": "zomato",
+      "gross": 880,
+      "tips": 30,
+      "fuel": 200,
+      "otherCosts": 40,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -8,
+      "platform": "swiggy",
+      "gross": 220,
+      "tips": 0,
+      "fuel": 60,
+      "otherCosts": 0,
+      "hours": 2,
+      "trips": 5
+    },
+    {
+      "dayOffset": -7,
+      "platform": "zomato",
+      "gross": 970,
+      "tips": 30,
+      "fuel": 220,
+      "otherCosts": 0,
+      "hours": 8,
+      "trips": 18
+    },
+    {
+      "dayOffset": -5,
+      "platform": "zomato",
+      "gross": 880,
+      "tips": 40,
+      "fuel": 200,
+      "otherCosts": 0,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -4,
+      "platform": "zomato",
+      "gross": 810,
+      "tips": 30,
+      "fuel": 200,
+      "otherCosts": 40,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -4,
+      "platform": "swiggy",
+      "gross": 310,
+      "tips": 0,
+      "fuel": 80,
+      "otherCosts": 0,
+      "hours": 3,
+      "trips": 7
+    },
+    {
+      "dayOffset": -3,
+      "platform": "zomato",
+      "gross": 820,
+      "tips": 10,
+      "fuel": 200,
+      "otherCosts": 0,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -2,
+      "platform": "zomato",
+      "gross": 950,
+      "tips": 30,
+      "fuel": 220,
+      "otherCosts": 0,
+      "hours": 8,
+      "trips": 18
+    },
+    {
+      "dayOffset": -2,
+      "platform": "swiggy",
+      "gross": 410,
+      "tips": 0,
+      "fuel": 110,
+      "otherCosts": 0,
+      "hours": 4,
+      "trips": 10
+    },
+    {
+      "dayOffset": -1,
+      "platform": "zomato",
+      "gross": 490,
+      "tips": 20,
+      "fuel": 200,
+      "otherCosts": 0,
+      "hours": 7,
+      "trips": 15
+    },
+    {
+      "dayOffset": -1,
+      "platform": "swiggy",
+      "gross": 310,
+      "tips": 0,
+      "fuel": 80,
+      "otherCosts": 0,
+      "hours": 3,
+      "trips": 7
+    },
+    {
+      "dayOffset": 0,
+      "platform": "zomato",
+      "gross": 630,
+      "tips": 0,
+      "fuel": 140,
+      "otherCosts": 40,
+      "hours": 5,
+      "trips": 11
+    },
+    {
+      "dayOffset": 0,
+      "platform": "swiggy",
+      "gross": 320,
+      "tips": 0,
+      "fuel": 80,
+      "otherCosts": 0,
+      "hours": 3,
+      "trips": 7
+    }
+  ],
+  "documents": [
+    {
+      "id": "aadhaar",
+      "have": true
+    },
+    {
+      "id": "bank",
+      "have": true
+    },
+    {
+      "id": "pan",
+      "have": true
+    },
+    {
+      "id": "dl",
+      "have": true,
+      "holderName": "Gurpreet Singh",
+      "expiryOffset": 20
+    },
+    {
+      "id": "rc",
+      "have": true,
+      "expiryOffset": 900
+    },
+    {
+      "id": "insurance",
+      "have": true,
+      "expiryOffset": 160
+    }
+  ],
+  "incidents": [
+    {
+      "dayOffset": -2,
+      "hour": 23,
+      "minute": 15,
+      "type": "accident",
+      "locationLabel": "Ferozepur Road, Ludhiana",
+      "notes": "Slipped on a wet road during a Zomato delivery. Scraped knee, bike mirror broken. Order was marked late."
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Bhaji (brother)",
+      "phone": "+91 98765 43210"
+    }
+  ]
+}

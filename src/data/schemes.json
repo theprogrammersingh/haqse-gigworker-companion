@@ -1,0 +1,208 @@
+[
+  {
+    "id": "eshram",
+    "name": "e-Shram card",
+    "level": "central",
+    "summary": {
+      "en": "Free national ID for unorganised and platform workers. Opens the door to other schemes and accident cover.",
+      "hi": "असंगठित और प्लेटफ़ॉर्म कामगारों के लिए मुफ़्त राष्ट्रीय पहचान पत्र। इससे दूसरी योजनाएँ और दुर्घटना बीमा मिलने का रास्ता खुलता है।",
+      "pa": "ਅਸੰਗਠਿਤ ਅਤੇ ਪਲੇਟਫਾਰਮ ਕਾਮਿਆਂ ਲਈ ਮੁਫ਼ਤ ਰਾਸ਼ਟਰੀ ਪਛਾਣ ਪੱਤਰ। ਇਸ ਨਾਲ ਹੋਰ ਸਕੀਮਾਂ ਅਤੇ ਹਾਦਸਾ ਬੀਮੇ ਦਾ ਰਾਹ ਖੁੱਲ੍ਹਦਾ ਹੈ।"
+    },
+    "benefits": [
+      "12-digit Universal Account Number (UAN) valid across India",
+      "Needed to register as a platform worker for health cover under PM-JAY",
+      "Accidental death or permanent disability cover of ₹2 lakh (₹1 lakh for partial disability) through PMSBY when linked"
+    ],
+    "eligibility": { "ageMin": 16, "ageMax": 59 },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Self-register free at eshram.gov.in with an Aadhaar-linked mobile number, or visit a Common Service Centre (CSC). You must not be an EPFO/ESIC member or an income-tax payer.",
+    "url": "https://eshram.gov.in",
+    "helpline": "14434",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "pmjay-platform",
+    "name": "Ayushman Bharat PM-JAY for platform workers",
+    "level": "central",
+    "summary": {
+      "en": "Free hospital treatment up to ₹5 lakh a year for your family, for platform workers registered on e-Shram.",
+      "hi": "ई-श्रम पर पंजीकृत प्लेटफ़ॉर्म कामगारों के परिवार के लिए हर साल ₹5 लाख तक मुफ़्त अस्पताल इलाज।",
+      "pa": "ਈ-ਸ਼੍ਰਮ ਉੱਤੇ ਰਜਿਸਟਰਡ ਪਲੇਟਫਾਰਮ ਕਾਮਿਆਂ ਦੇ ਪਰਿਵਾਰ ਲਈ ਹਰ ਸਾਲ ₹5 ਲੱਖ ਤੱਕ ਮੁਫ਼ਤ ਹਸਪਤਾਲ ਇਲਾਜ।"
+    },
+    "benefits": [
+      "Cashless treatment up to ₹5 lakh per family per year at empanelled hospitals",
+      "Covers hospitalisation, surgery and many pre-existing conditions"
+    ],
+    "eligibility": { "ageMin": 18, "platformWorker": true },
+    "documents": ["aadhaar", "eshram"],
+    "howToApply": "Register on e-Shram as a platform worker first, then get your Ayushman card at beneficiary.nha.gov.in, the Ayushman app or a CSC.",
+    "url": "https://beneficiary.nha.gov.in",
+    "helpline": "14555",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "pm-sym",
+    "name": "PM Shram Yogi Maandhan (PM-SYM)",
+    "level": "central",
+    "summary": {
+      "en": "Pension of ₹3,000 a month after age 60. You pay ₹55–₹200 a month and the government pays the same.",
+      "hi": "60 साल के बाद हर महीने ₹3,000 पेंशन। आप हर महीने ₹55–₹200 देते हैं और सरकार भी उतना ही देती है।",
+      "pa": "60 ਸਾਲ ਤੋਂ ਬਾਅਦ ਹਰ ਮਹੀਨੇ ₹3,000 ਪੈਨਸ਼ਨ। ਤੁਸੀਂ ਹਰ ਮਹੀਨੇ ₹55–₹200 ਦਿੰਦੇ ਹੋ ਅਤੇ ਸਰਕਾਰ ਵੀ ਓਨਾ ਹੀ ਦਿੰਦੀ ਹੈ।"
+    },
+    "benefits": [
+      "Assured pension of ₹3,000 per month from age 60",
+      "Government matches your monthly contribution",
+      "Spouse gets 50% family pension"
+    ],
+    "eligibility": { "ageMin": 18, "ageMax": 40, "maxMonthlyIncome": 15000 },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Enrol at a Common Service Centre or at maandhan.in with Aadhaar and a savings bank account or Jan Dhan account. Not for EPFO/ESIC/NPS members or income-tax payers.",
+    "url": "https://maandhan.in",
+    "helpline": "1800 267 6888",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "pmsby",
+    "name": "PM Suraksha Bima Yojana (PMSBY)",
+    "level": "central",
+    "summary": {
+      "en": "Accident insurance of ₹2 lakh for just ₹20 a year, taken from your bank account.",
+      "hi": "सिर्फ़ ₹20 सालाना में ₹2 लाख का दुर्घटना बीमा, पैसा आपके बैंक खाते से कटता है।",
+      "pa": "ਸਿਰਫ਼ ₹20 ਸਾਲਾਨਾ ਵਿੱਚ ₹2 ਲੱਖ ਦਾ ਹਾਦਸਾ ਬੀਮਾ, ਪੈਸਾ ਤੁਹਾਡੇ ਬੈਂਕ ਖਾਤੇ ਵਿੱਚੋਂ ਕੱਟਦਾ ਹੈ।"
+    },
+    "benefits": [
+      "₹2 lakh for accidental death or total permanent disability",
+      "₹1 lakh for partial permanent disability",
+      "Premium ₹20 per year, auto-debited"
+    ],
+    "eligibility": { "ageMin": 18, "ageMax": 70 },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Ask your bank branch, or use your bank's app or net banking, to enrol in PMSBY. It renews every year on 1 June.",
+    "url": "https://jansuraksha.gov.in",
+    "helpline": "1800 180 1111",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "pmjjby",
+    "name": "PM Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "level": "central",
+    "summary": {
+      "en": "Life insurance of ₹2 lakh for your family for ₹436 a year.",
+      "hi": "₹436 सालाना में आपके परिवार के लिए ₹2 लाख का जीवन बीमा।",
+      "pa": "₹436 ਸਾਲਾਨਾ ਵਿੱਚ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਲਈ ₹2 ਲੱਖ ਦਾ ਜੀਵਨ ਬੀਮਾ।"
+    },
+    "benefits": [
+      "₹2 lakh paid to your nominee on death from any cause",
+      "Premium ₹436 per year, auto-debited"
+    ],
+    "eligibility": { "ageMin": 18, "ageMax": 50 },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Enrol through your bank branch, bank app or net banking. It renews every year on 1 June.",
+    "url": "https://jansuraksha.gov.in",
+    "helpline": "1800 180 1111",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "apy",
+    "name": "Atal Pension Yojana (APY)",
+    "level": "central",
+    "summary": {
+      "en": "Choose a pension of ₹1,000 to ₹5,000 a month after 60 by saving a small amount every month.",
+      "hi": "हर महीने थोड़ी बचत करके 60 के बाद ₹1,000 से ₹5,000 महीने की पेंशन चुनें।",
+      "pa": "ਹਰ ਮਹੀਨੇ ਥੋੜ੍ਹੀ ਬੱਚਤ ਕਰਕੇ 60 ਤੋਂ ਬਾਅਦ ₹1,000 ਤੋਂ ₹5,000 ਮਹੀਨੇ ਦੀ ਪੈਨਸ਼ਨ ਚੁਣੋ।"
+    },
+    "benefits": [
+      "Guaranteed monthly pension of ₹1,000–₹5,000 from age 60",
+      "Same pension continues to spouse; savings go to nominee"
+    ],
+    "eligibility": { "ageMin": 18, "ageMax": 40 },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Open APY at your bank or post office where you have a savings account. Income-tax payers cannot join.",
+    "url": "https://www.pfrda.org.in",
+    "helpline": "1800 110 069",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "rajasthan-gig",
+    "name": "Rajasthan Platform Based Gig Workers Welfare Board",
+    "level": "state",
+    "summary": {
+      "en": "Rajasthan's 2023 gig worker law: register with the welfare board for an ID and welfare schemes funded by platforms.",
+      "hi": "राजस्थान का 2023 गिग वर्कर कानून: कल्याण बोर्ड में पंजीकरण करें, पहचान पत्र और प्लेटफ़ॉर्म के पैसे से चलने वाली योजनाएँ पाएँ।",
+      "pa": "ਰਾਜਸਥਾਨ ਦਾ 2023 ਗਿਗ ਵਰਕਰ ਕਾਨੂੰਨ: ਭਲਾਈ ਬੋਰਡ ਵਿੱਚ ਰਜਿਸਟਰ ਕਰੋ, ਪਛਾਣ ਪੱਤਰ ਅਤੇ ਪਲੇਟਫਾਰਮਾਂ ਦੇ ਪੈਸੇ ਨਾਲ ਚੱਲਣ ਵਾਲੀਆਂ ਸਕੀਮਾਂ ਲਵੋ।"
+    },
+    "benefits": [
+      "Unique ID as a registered platform gig worker",
+      "Access to welfare schemes from a fund paid by platform companies",
+      "Right to raise grievances with the board"
+    ],
+    "eligibility": { "ageMin": 18, "states": ["RJ"], "platformWorker": true },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Register through the Rajasthan labour department portal or an e-Mitra centre.",
+    "url": "https://labour.rajasthan.gov.in",
+    "helpline": "181",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "karnataka-gig",
+    "name": "Karnataka Platform-based Gig Workers Welfare Board",
+    "level": "state",
+    "summary": {
+      "en": "Karnataka's 2025 gig worker law: registration, social security from a platform-funded fund, and protection from sudden deactivation.",
+      "hi": "कर्नाटक का 2025 गिग वर्कर कानून: पंजीकरण, प्लेटफ़ॉर्म के पैसे से सामाजिक सुरक्षा, और अचानक आईडी बंद होने से सुरक्षा।",
+      "pa": "ਕਰਨਾਟਕ ਦਾ 2025 ਗਿਗ ਵਰਕਰ ਕਾਨੂੰਨ: ਰਜਿਸਟ੍ਰੇਸ਼ਨ, ਪਲੇਟਫਾਰਮ ਦੇ ਪੈਸੇ ਨਾਲ ਸਮਾਜਿਕ ਸੁਰੱਖਿਆ, ਅਤੇ ਅਚਾਨਕ ਆਈਡੀ ਬੰਦ ਹੋਣ ਤੋਂ ਸੁਰੱਖਿਆ।"
+    },
+    "benefits": [
+      "Registration and a unique ID with the welfare board",
+      "Social security benefits from a welfare fee paid by platforms",
+      "Written reasons and prior notice before termination; grievance redressal"
+    ],
+    "eligibility": { "ageMin": 18, "states": ["KA"], "platformWorker": true },
+    "documents": ["aadhaar", "bank"],
+    "howToApply": "Register through the Karnataka labour department or the welfare board's registration drive.",
+    "url": "https://labour.karnataka.gov.in",
+    "helpline": "155214",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "punjab-bocw",
+    "name": "Punjab Construction Workers Welfare Board",
+    "level": "state",
+    "summary": {
+      "en": "For construction workers in Punjab: registration brings help for children's education, marriage, medical costs and pension.",
+      "hi": "पंजाब के निर्माण मज़दूरों के लिए: पंजीकरण से बच्चों की पढ़ाई, शादी, इलाज के खर्च और पेंशन में मदद।",
+      "pa": "ਪੰਜਾਬ ਦੇ ਉਸਾਰੀ ਮਜ਼ਦੂਰਾਂ ਲਈ: ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਨਾਲ ਬੱਚਿਆਂ ਦੀ ਪੜ੍ਹਾਈ, ਵਿਆਹ, ਇਲਾਜ ਦੇ ਖਰਚੇ ਅਤੇ ਪੈਨਸ਼ਨ ਵਿੱਚ ਮਦਦ।"
+    },
+    "benefits": [
+      "Scholarships for workers' children",
+      "Financial help for marriage and medical treatment",
+      "Pension and accident assistance"
+    ],
+    "eligibility": { "ageMin": 18, "ageMax": 60, "states": ["PB"], "workTypes": ["construction"] },
+    "documents": ["aadhaar", "bank", "ration"],
+    "howToApply": "Register at a Sewa Kendra or the district labour office. You need proof of at least 90 days of construction work in the last 12 months.",
+    "url": "https://pblabour.gov.in",
+    "helpline": "District labour office",
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "nfsa-ration",
+    "name": "Free ration (NFSA / One Nation One Ration Card)",
+    "level": "central",
+    "summary": {
+      "en": "Free monthly food grains for eligible low-income households, usable at any ration shop in India.",
+      "hi": "योग्य कम आय वाले परिवारों को हर महीने मुफ़्त अनाज, भारत की किसी भी राशन दुकान पर।",
+      "pa": "ਯੋਗ ਘੱਟ ਆਮਦਨ ਵਾਲੇ ਪਰਿਵਾਰਾਂ ਨੂੰ ਹਰ ਮਹੀਨੇ ਮੁਫ਼ਤ ਅਨਾਜ, ਭਾਰਤ ਦੀ ਕਿਸੇ ਵੀ ਰਾਸ਼ਨ ਦੁਕਾਨ ਉੱਤੇ।"
+    },
+    "benefits": [
+      "5 kg free food grains per person per month for priority households",
+      "Works at any ration shop in India with One Nation One Ration Card"
+    ],
+    "eligibility": { "maxMonthlyIncome": 15000 },
+    "documents": ["aadhaar", "ration", "income"],
+    "howToApply": "Apply for a ration card at your state food department portal or nearest ration office. Income limits differ by state.",
+    "url": "https://nfsa.gov.in",
+    "helpline": "1967",
+    "verifiedOn": "2026-10-17"
+  }
+]

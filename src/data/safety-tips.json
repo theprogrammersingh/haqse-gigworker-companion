@@ -1,0 +1,152 @@
+[
+  {
+    "id": "night-share-trip",
+    "conditions": ["night"],
+    "vehicles": [],
+    "text": {
+      "en": "Share your live location with a family member before night trips.",
+      "hi": "रात के काम से पहले घर के किसी सदस्य से अपनी लाइव लोकेशन शेयर करें।",
+      "pa": "ਰਾਤ ਦੇ ਕੰਮ ਤੋਂ ਪਹਿਲਾਂ ਘਰ ਦੇ ਕਿਸੇ ਮੈਂਬਰ ਨਾਲ ਆਪਣੀ ਲਾਈਵ ਲੋਕੇਸ਼ਨ ਸਾਂਝੀ ਕਰੋ।"
+    }
+  },
+  {
+    "id": "night-lit-roads",
+    "conditions": ["night"],
+    "vehicles": [],
+    "text": {
+      "en": "Use main, well-lit roads. If a drop point feels unsafe, stop at a lit public place and call the customer.",
+      "hi": "मुख्य और रोशनी वाली सड़कें लें। अगर पहुँचने की जगह असुरक्षित लगे, तो रोशनी वाली सार्वजनिक जगह पर रुककर ग्राहक को कॉल करें।",
+      "pa": "ਮੁੱਖ ਅਤੇ ਰੌਸ਼ਨੀ ਵਾਲੀਆਂ ਸੜਕਾਂ ਵਰਤੋ। ਜੇ ਪਹੁੰਚਣ ਵਾਲੀ ਥਾਂ ਅਸੁਰੱਖਿਅਤ ਲੱਗੇ, ਤਾਂ ਰੌਸ਼ਨੀ ਵਾਲੀ ਜਨਤਕ ਥਾਂ ਉੱਤੇ ਰੁਕ ਕੇ ਗਾਹਕ ਨੂੰ ਕਾਲ ਕਰੋ।"
+    }
+  },
+  {
+    "id": "night-reflective",
+    "conditions": ["night"],
+    "vehicles": ["bike", "cycle"],
+    "text": {
+      "en": "Wear a reflective jacket and keep your headlight and tail light working.",
+      "hi": "रिफ़्लेक्टिव जैकेट पहनें और हेडलाइट व टेल लाइट ठीक रखें।",
+      "pa": "ਰਿਫਲੈਕਟਿਵ ਜੈਕਟ ਪਾਓ ਅਤੇ ਹੈੱਡਲਾਈਟ ਤੇ ਟੇਲ ਲਾਈਟ ਠੀਕ ਰੱਖੋ।"
+    }
+  },
+  {
+    "id": "night-car-locks",
+    "conditions": ["night"],
+    "vehicles": ["car", "auto"],
+    "text": {
+      "en": "Match the passenger's name and OTP before starting. Keep doors locked between rides.",
+      "hi": "सफ़र शुरू करने से पहले सवारी का नाम और OTP मिलाएँ। सवारियों के बीच दरवाज़े बंद रखें।",
+      "pa": "ਸਫ਼ਰ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਸਵਾਰੀ ਦਾ ਨਾਮ ਅਤੇ OTP ਮਿਲਾਓ। ਸਵਾਰੀਆਂ ਵਿਚਕਾਰ ਦਰਵਾਜ਼ੇ ਬੰਦ ਰੱਖੋ।"
+    }
+  },
+  {
+    "id": "heat-water",
+    "conditions": ["heat"],
+    "vehicles": [],
+    "text": {
+      "en": "Drink water every 30 minutes, even if not thirsty. Carry ORS.",
+      "hi": "हर 30 मिनट में पानी पिएँ, प्यास न हो तब भी। ORS साथ रखें।",
+      "pa": "ਹਰ 30 ਮਿੰਟ ਵਿੱਚ ਪਾਣੀ ਪੀਓ, ਪਿਆਸ ਨਾ ਹੋਵੇ ਤਾਂ ਵੀ। ORS ਨਾਲ ਰੱਖੋ।"
+    }
+  },
+  {
+    "id": "heat-break",
+    "conditions": ["heat"],
+    "vehicles": [],
+    "text": {
+      "en": "Rest in shade between 12 and 3 pm when you can. Dizziness, headache or no sweating means stop and cool down now.",
+      "hi": "हो सके तो दोपहर 12 से 3 बजे छाँव में आराम करें। चक्कर, सिरदर्द या पसीना न आना हो तो तुरंत रुकें और ठंडक लें।",
+      "pa": "ਹੋ ਸਕੇ ਤਾਂ ਦੁਪਹਿਰ 12 ਤੋਂ 3 ਵਜੇ ਛਾਂ ਵਿੱਚ ਆਰਾਮ ਕਰੋ। ਚੱਕਰ, ਸਿਰਦਰਦ ਜਾਂ ਪਸੀਨਾ ਨਾ ਆਉਣਾ ਹੋਵੇ ਤਾਂ ਤੁਰੰਤ ਰੁਕੋ ਅਤੇ ਠੰਢਕ ਲਵੋ।"
+    }
+  },
+  {
+    "id": "heat-cover",
+    "conditions": ["heat"],
+    "vehicles": ["bike", "cycle"],
+    "text": {
+      "en": "Cover your head and neck under the helmet with a light cotton cloth.",
+      "hi": "हेलमेट के नीचे सिर और गर्दन को हल्के सूती कपड़े से ढकें।",
+      "pa": "ਹੈਲਮੈਟ ਹੇਠਾਂ ਸਿਰ ਅਤੇ ਗਰਦਨ ਨੂੰ ਹਲਕੇ ਸੂਤੀ ਕੱਪੜੇ ਨਾਲ ਢਕੋ।"
+    }
+  },
+  {
+    "id": "rain-speed",
+    "conditions": ["rain"],
+    "vehicles": ["bike", "cycle", "auto"],
+    "text": {
+      "en": "Slow down and brake early. Avoid painted road lines and metal covers. They get slippery.",
+      "hi": "धीरे चलें और पहले से ब्रेक लगाएँ। सड़क की पेंट वाली लाइनों और लोहे के ढक्कनों से बचें, वे फिसलन भरे होते हैं।",
+      "pa": "ਹੌਲੀ ਚੱਲੋ ਅਤੇ ਪਹਿਲਾਂ ਤੋਂ ਬ੍ਰੇਕ ਲਾਓ। ਸੜਕ ਦੀਆਂ ਪੇਂਟ ਵਾਲੀਆਂ ਲਾਈਨਾਂ ਅਤੇ ਲੋਹੇ ਦੇ ਢੱਕਣਾਂ ਤੋਂ ਬਚੋ, ਉਹ ਤਿਲਕਣ ਵਾਲੇ ਹੁੰਦੇ ਹਨ।"
+    }
+  },
+  {
+    "id": "rain-water",
+    "conditions": ["rain"],
+    "vehicles": [],
+    "text": {
+      "en": "Never drive through water deeper than your ankle or near fallen wires. Wait or take another road.",
+      "hi": "टखने से गहरे पानी या गिरे हुए तारों के पास से कभी न निकलें। रुकें या दूसरा रास्ता लें।",
+      "pa": "ਗਿੱਟੇ ਤੋਂ ਡੂੰਘੇ ਪਾਣੀ ਜਾਂ ਡਿੱਗੀਆਂ ਤਾਰਾਂ ਕੋਲੋਂ ਕਦੇ ਨਾ ਲੰਘੋ। ਰੁਕੋ ਜਾਂ ਹੋਰ ਰਸਤਾ ਲਵੋ।"
+    }
+  },
+  {
+    "id": "rain-phone",
+    "conditions": ["rain"],
+    "vehicles": [],
+    "text": {
+      "en": "Keep your phone in a zip pouch so you can still call for help.",
+      "hi": "फ़ोन को ज़िप वाली थैली में रखें ताकि ज़रूरत पड़ने पर कॉल कर सकें।",
+      "pa": "ਫ਼ੋਨ ਨੂੰ ਜ਼ਿੱਪ ਵਾਲੀ ਥੈਲੀ ਵਿੱਚ ਰੱਖੋ ਤਾਂ ਜੋ ਲੋੜ ਪੈਣ ਉੱਤੇ ਕਾਲ ਕਰ ਸਕੋ।"
+    }
+  },
+  {
+    "id": "general-helmet",
+    "conditions": ["general"],
+    "vehicles": ["bike"],
+    "text": {
+      "en": "Wear a strapped helmet on every trip. Never use the phone while riding. Stop to check the map.",
+      "hi": "हर सफ़र में स्ट्रैप बंधा हेलमेट पहनें। चलाते समय फ़ोन न चलाएँ, नक्शा देखने के लिए रुकें।",
+      "pa": "ਹਰ ਸਫ਼ਰ ਵਿੱਚ ਸਟ੍ਰੈਪ ਬੰਨ੍ਹਿਆ ਹੈਲਮੈਟ ਪਾਓ। ਚਲਾਉਂਦੇ ਸਮੇਂ ਫ਼ੋਨ ਨਾ ਵਰਤੋ, ਨਕਸ਼ਾ ਵੇਖਣ ਲਈ ਰੁਕੋ।"
+    }
+  },
+  {
+    "id": "general-seatbelt",
+    "conditions": ["general"],
+    "vehicles": ["car"],
+    "text": {
+      "en": "Take a 15-minute break every 2 hours of driving. Tiredness causes crashes.",
+      "hi": "हर 2 घंटे गाड़ी चलाने के बाद 15 मिनट आराम करें। थकान से हादसे होते हैं।",
+      "pa": "ਹਰ 2 ਘੰਟੇ ਗੱਡੀ ਚਲਾਉਣ ਤੋਂ ਬਾਅਦ 15 ਮਿੰਟ ਆਰਾਮ ਕਰੋ। ਥਕਾਵਟ ਨਾਲ ਹਾਦਸੇ ਹੁੰਦੇ ਹਨ।"
+    }
+  },
+  {
+    "id": "general-sos-contacts",
+    "conditions": ["general"],
+    "vehicles": [],
+    "text": {
+      "en": "Save two trusted contacts in HaqSe so SOS can reach them in one press.",
+      "hi": "HaqSe में दो भरोसेमंद नंबर सेव करें ताकि SOS एक बार दबाने पर उन तक पहुँचे।",
+      "pa": "HaqSe ਵਿੱਚ ਦੋ ਭਰੋਸੇਮੰਦ ਨੰਬਰ ਸੇਵ ਕਰੋ ਤਾਂ ਜੋ SOS ਇੱਕ ਵਾਰ ਦਬਾਉਣ ਉੱਤੇ ਉਨ੍ਹਾਂ ਤੱਕ ਪਹੁੰਚੇ।"
+    }
+  },
+  {
+    "id": "general-site-safety",
+    "conditions": ["general"],
+    "vehicles": ["none"],
+    "text": {
+      "en": "On a work site, ask for a helmet and harness before working at height. You can refuse unsafe work.",
+      "hi": "काम की जगह पर ऊँचाई पर काम से पहले हेलमेट और हार्नेस माँगें। असुरक्षित काम से मना कर सकते हैं।",
+      "pa": "ਕੰਮ ਵਾਲੀ ਥਾਂ ਉੱਤੇ ਉਚਾਈ ਉੱਤੇ ਕੰਮ ਤੋਂ ਪਹਿਲਾਂ ਹੈਲਮੈਟ ਅਤੇ ਹਾਰਨੈੱਸ ਮੰਗੋ। ਅਸੁਰੱਖਿਅਤ ਕੰਮ ਤੋਂ ਇਨਕਾਰ ਕਰ ਸਕਦੇ ਹੋ।"
+    }
+  },
+  {
+    "id": "general-cash",
+    "conditions": ["general"],
+    "vehicles": [],
+    "text": {
+      "en": "Prefer UPI for cash-on-delivery. Don't show large amounts of cash in public.",
+      "hi": "कैश ऑन डिलीवरी में UPI को प्राथमिकता दें। सबके सामने ज़्यादा नकद न दिखाएँ।",
+      "pa": "ਕੈਸ਼ ਆਨ ਡਿਲੀਵਰੀ ਵਿੱਚ UPI ਨੂੰ ਤਰਜੀਹ ਦਿਓ। ਸਭ ਦੇ ਸਾਹਮਣੇ ਜ਼ਿਆਦਾ ਨਕਦੀ ਨਾ ਵਿਖਾਓ।"
+    }
+  }
+]

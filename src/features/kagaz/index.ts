@@ -1,0 +1,1 @@
+export { KagazPage } from './KagazPage'

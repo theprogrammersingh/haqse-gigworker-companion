@@ -1,0 +1,82 @@
+[
+  {
+    "id": "pay-transparency",
+    "icon": "receipt",
+    "title": {
+      "en": "Know how your pay is calculated",
+      "hi": "जानिए आपकी कमाई कैसे गिनी जाती है",
+      "pa": "ਜਾਣੋ ਤੁਹਾਡੀ ਕਮਾਈ ਕਿਵੇਂ ਗਿਣੀ ਜਾਂਦੀ ਹੈ"
+    },
+    "body": {
+      "en": "Gig worker laws in Rajasthan and Karnataka say platforms must explain payouts and deductions. Ask the platform in writing for the reason for any cut. Keep your own daily record in HaqSe as proof.",
+      "hi": "राजस्थान और कर्नाटक के गिग वर्कर कानून कहते हैं कि प्लेटफ़ॉर्म को भुगतान और कटौती समझानी होगी। किसी भी कटौती का कारण लिखकर पूछें। सबूत के लिए HaqSe में अपना रोज़ का हिसाब रखें।",
+      "pa": "ਰਾਜਸਥਾਨ ਅਤੇ ਕਰਨਾਟਕ ਦੇ ਗਿਗ ਵਰਕਰ ਕਾਨੂੰਨ ਕਹਿੰਦੇ ਹਨ ਕਿ ਪਲੇਟਫਾਰਮ ਨੂੰ ਭੁਗਤਾਨ ਅਤੇ ਕਟੌਤੀ ਸਮਝਾਉਣੀ ਪਵੇਗੀ। ਕਿਸੇ ਵੀ ਕਟੌਤੀ ਦਾ ਕਾਰਨ ਲਿਖ ਕੇ ਪੁੱਛੋ। ਸਬੂਤ ਲਈ HaqSe ਵਿੱਚ ਆਪਣਾ ਰੋਜ਼ ਦਾ ਹਿਸਾਬ ਰੱਖੋ।"
+    },
+    "source": "Rajasthan Act 2023; Karnataka Act 2025",
+    "url": "https://labour.gov.in"
+  },
+  {
+    "id": "deactivation",
+    "icon": "user-x",
+    "title": {
+      "en": "Your ID cannot be blocked without a reason",
+      "hi": "बिना कारण आपकी आईडी बंद नहीं की जा सकती",
+      "pa": "ਬਿਨਾਂ ਕਾਰਨ ਤੁਹਾਡੀ ਆਈਡੀ ਬੰਦ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"
+    },
+    "body": {
+      "en": "In Karnataka, platforms must give notice and a written reason before ending your contract. Everywhere, you can ask the platform's grievance officer for the reason and an appeal. Save screenshots and dates.",
+      "hi": "कर्नाटक में प्लेटफ़ॉर्म को आपका काम बंद करने से पहले नोटिस और लिखित कारण देना होगा। हर जगह आप प्लेटफ़ॉर्म के शिकायत अधिकारी से कारण और अपील माँग सकते हैं। स्क्रीनशॉट और तारीखें संभालकर रखें।",
+      "pa": "ਕਰਨਾਟਕ ਵਿੱਚ ਪਲੇਟਫਾਰਮ ਨੂੰ ਤੁਹਾਡਾ ਕੰਮ ਬੰਦ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਨੋਟਿਸ ਅਤੇ ਲਿਖਤੀ ਕਾਰਨ ਦੇਣਾ ਪਵੇਗਾ। ਹਰ ਥਾਂ ਤੁਸੀਂ ਪਲੇਟਫਾਰਮ ਦੇ ਸ਼ਿਕਾਇਤ ਅਧਿਕਾਰੀ ਤੋਂ ਕਾਰਨ ਅਤੇ ਅਪੀਲ ਮੰਗ ਸਕਦੇ ਹੋ। ਸਕ੍ਰੀਨਸ਼ਾਟ ਅਤੇ ਤਾਰੀਖਾਂ ਸੰਭਾਲ ਕੇ ਰੱਖੋ।"
+    },
+    "source": "Karnataka Platform-based Gig Workers Act 2025",
+    "url": "https://labour.karnataka.gov.in"
+  },
+  {
+    "id": "accident-cover",
+    "icon": "shield",
+    "title": {
+      "en": "Accident cover is your right",
+      "hi": "दुर्घटना बीमा आपका हक़ है",
+      "pa": "ਹਾਦਸਾ ਬੀਮਾ ਤੁਹਾਡਾ ਹੱਕ ਹੈ"
+    },
+    "body": {
+      "en": "Many platforms give in-app accident insurance during active orders. Check the app's insurance page. Also register on e-Shram and join PMSBY (₹20 a year) for ₹2 lakh cover. Report accidents within the insurer's time limit.",
+      "hi": "कई प्लेटफ़ॉर्म ऑर्डर के दौरान ऐप में दुर्घटना बीमा देते हैं। ऐप का बीमा पेज देखें। ई-श्रम पर पंजीकरण करें और ₹2 लाख कवर के लिए PMSBY (₹20 सालाना) लें। दुर्घटना की सूचना बीमा कंपनी की समय सीमा में दें।",
+      "pa": "ਕਈ ਪਲੇਟਫਾਰਮ ਆਰਡਰ ਦੌਰਾਨ ਐਪ ਵਿੱਚ ਹਾਦਸਾ ਬੀਮਾ ਦਿੰਦੇ ਹਨ। ਐਪ ਦਾ ਬੀਮਾ ਪੇਜ ਵੇਖੋ। ਈ-ਸ਼੍ਰਮ ਉੱਤੇ ਰਜਿਸਟਰ ਕਰੋ ਅਤੇ ₹2 ਲੱਖ ਕਵਰ ਲਈ PMSBY (₹20 ਸਾਲਾਨਾ) ਲਵੋ। ਹਾਦਸੇ ਦੀ ਸੂਚਨਾ ਬੀਮਾ ਕੰਪਨੀ ਦੀ ਸਮਾਂ ਸੀਮਾ ਵਿੱਚ ਦਿਓ।"
+    },
+    "source": "e-Shram; PMSBY",
+    "url": "https://eshram.gov.in"
+  },
+  {
+    "id": "grievance-channels",
+    "icon": "megaphone",
+    "title": {
+      "en": "Where to complain",
+      "hi": "शिकायत कहाँ करें",
+      "pa": "ਸ਼ਿਕਾਇਤ ਕਿੱਥੇ ਕਰੀਏ"
+    },
+    "body": {
+      "en": "1) The platform's in-app support or grievance officer, in writing. 2) Your state labour department or welfare board. 3) The national e-Shram helpline 14434. For crime or danger, call 112.",
+      "hi": "1) प्लेटफ़ॉर्म का ऐप सपोर्ट या शिकायत अधिकारी, लिखित में। 2) आपके राज्य का श्रम विभाग या कल्याण बोर्ड। 3) राष्ट्रीय ई-श्रम हेल्पलाइन 14434। अपराध या ख़तरे में 112 पर कॉल करें।",
+      "pa": "1) ਪਲੇਟਫਾਰਮ ਦਾ ਐਪ ਸਪੋਰਟ ਜਾਂ ਸ਼ਿਕਾਇਤ ਅਧਿਕਾਰੀ, ਲਿਖਤੀ ਵਿੱਚ। 2) ਤੁਹਾਡੇ ਰਾਜ ਦਾ ਕਿਰਤ ਵਿਭਾਗ ਜਾਂ ਭਲਾਈ ਬੋਰਡ। 3) ਰਾਸ਼ਟਰੀ ਈ-ਸ਼੍ਰਮ ਹੈਲਪਲਾਈਨ 14434। ਜੁਰਮ ਜਾਂ ਖ਼ਤਰੇ ਵਿੱਚ 112 ਉੱਤੇ ਕਾਲ ਕਰੋ।"
+    },
+    "source": "Ministry of Labour and Employment",
+    "url": "https://labour.gov.in"
+  },
+  {
+    "id": "social-security-code",
+    "icon": "scale",
+    "title": {
+      "en": "Gig workers are recognised in national law",
+      "hi": "गिग वर्कर राष्ट्रीय कानून में मान्य हैं",
+      "pa": "ਗਿਗ ਵਰਕਰ ਰਾਸ਼ਟਰੀ ਕਾਨੂੰਨ ਵਿੱਚ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਹਨ"
+    },
+    "body": {
+      "en": "The Code on Social Security, 2020 names gig and platform workers and lets the government run social security schemes for them, funded partly by platform companies. Registering on e-Shram keeps you ready for these benefits.",
+      "hi": "सामाजिक सुरक्षा संहिता 2020 में गिग और प्लेटफ़ॉर्म कामगारों का नाम है और सरकार उनके लिए योजनाएँ चला सकती है, जिनका कुछ पैसा प्लेटफ़ॉर्म कंपनियाँ देती हैं। ई-श्रम पर पंजीकरण से आप इन लाभों के लिए तैयार रहते हैं।",
+      "pa": "ਸਮਾਜਿਕ ਸੁਰੱਖਿਆ ਕੋਡ 2020 ਵਿੱਚ ਗਿਗ ਅਤੇ ਪਲੇਟਫਾਰਮ ਕਾਮਿਆਂ ਦਾ ਨਾਮ ਹੈ ਅਤੇ ਸਰਕਾਰ ਉਨ੍ਹਾਂ ਲਈ ਸਕੀਮਾਂ ਚਲਾ ਸਕਦੀ ਹੈ, ਜਿਨ੍ਹਾਂ ਦਾ ਕੁਝ ਪੈਸਾ ਪਲੇਟਫਾਰਮ ਕੰਪਨੀਆਂ ਦਿੰਦੀਆਂ ਹਨ। ਈ-ਸ਼੍ਰਮ ਉੱਤੇ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਨਾਲ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਲਾਭਾਂ ਲਈ ਤਿਆਰ ਰਹਿੰਦੇ ਹੋ।"
+    },
+    "source": "Code on Social Security, 2020",
+    "url": "https://labour.gov.in"
+  }
+]
