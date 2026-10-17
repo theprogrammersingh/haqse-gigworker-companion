@@ -1,5 +1,6 @@
 /// <reference types="vitest/config" />
-import { copyFileSync, existsSync } from 'node:fs'
+import { execSync } from 'node:child_process'
+import { copyFileSync, existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
@@ -8,6 +9,23 @@ import { defineConfig, type Plugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 const base = process.env['VITE_BASE'] ?? '/'
+
+const pkg = JSON.parse(readFileSync(resolve(import.meta.dirname, 'package.json'), 'utf8')) as {
+  version: string
+}
+
+/** Short commit of this build, for "which version am I on?" in Settings. */
+function buildSha(): string {
+  const fromCi = process.env['GITHUB_SHA']
+  if (fromCi) return fromCi.slice(0, 7)
+  try {
+    return execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString()
+      .trim()
+  } catch {
+    return 'dev'
+  }
+}
 
 /** Pages cannot send headers, so the CSP ships as a meta tag. Build only: dev needs injected styles. */
 const CSP = [
@@ -41,12 +59,16 @@ function contentSecurityPolicy(): Plugin {
 
 /** GitHub Pages has no rewrites: serve the SPA shell for unknown paths. */
 function spaFallback(): Plugin {
+  let outDir = resolve(import.meta.dirname, 'dist')
   return {
     name: 'haqse:spa-404',
     apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir)
+    },
     closeBundle() {
-      const index = resolve(import.meta.dirname, 'dist/index.html')
-      if (existsSync(index)) copyFileSync(index, resolve(import.meta.dirname, 'dist/404.html'))
+      const index = resolve(outDir, 'index.html')
+      if (existsSync(index)) copyFileSync(index, resolve(outDir, '404.html'))
     },
   }
 }
@@ -54,21 +76,32 @@ function spaFallback(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   base,
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+    __BUILD_SHA__: JSON.stringify(buildSha()),
+  },
   resolve: { alias: { '@': resolve(import.meta.dirname, 'src') } },
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
     VitePWA({
-      registerType: 'autoUpdate',
-      injectRegister: 'script-defer',
+      // Prompt mode: a new deploy waits until the user taps "Update now" (PwaProvider + UpdateBanner).
+      registerType: 'prompt',
+      injectRegister: false,
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'HaqSe — Gig Worker Companion',
         short_name: 'HaqSe',
         description:
           'Track real earnings, find schemes, keep documents ready and draft complaints.',
+        id: base,
         lang: 'en',
+        dir: 'ltr',
+        categories: ['finance', 'productivity', 'utilities'],
+        prefer_related_applications: false,
+        // Reopen the existing window when launched again (e.g. from a shortcut).
+        launch_handler: { client_mode: ['navigate-existing', 'auto'] },
         scope: base,
         start_url: base,
         display: 'standalone',
@@ -78,8 +111,56 @@ export default defineConfig({
         icons: [
           { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          {
+            src: 'pwa-maskable-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
           { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+        ],
+        shortcuts: [
+          {
+            name: 'Log earnings',
+            short_name: 'Log',
+            url: `${base}kamai?log=1`,
+            icons: [{ src: 'shortcut-log.png', sizes: '96x96', type: 'image/png' }],
+          },
+          {
+            name: 'SOS',
+            short_name: 'SOS',
+            url: `${base}suraksha?sos=1`,
+            icons: [{ src: 'shortcut-sos.png', sizes: '96x96', type: 'image/png' }],
+          },
+          {
+            name: 'Complaints',
+            short_name: 'Complaints',
+            url: `${base}shikayat`,
+            icons: [{ src: 'shortcut-complaint.png', sizes: '96x96', type: 'image/png' }],
+          },
+        ],
+        screenshots: [
+          {
+            src: 'screenshots/narrow-home.jpg',
+            sizes: '720x1520',
+            type: 'image/jpeg',
+            form_factor: 'narrow',
+            label: 'Today’s take-home and alerts',
+          },
+          {
+            src: 'screenshots/narrow-earnings.jpg',
+            sizes: '720x1520',
+            type: 'image/jpeg',
+            form_factor: 'narrow',
+            label: 'Earnings insights and payout drops',
+          },
+          {
+            src: 'screenshots/wide-home.jpg',
+            sizes: '1280x800',
+            type: 'image/jpeg',
+            form_factor: 'wide',
+            label: 'HaqSe on a larger screen',
+          },
         ],
       },
       workbox: {

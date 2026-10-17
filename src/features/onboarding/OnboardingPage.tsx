@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { useProfile, useToday } from '@/hooks'
 import { loadDemoData, updateSettings } from '@/lib/db'
+import { InstallCard } from '@/features/install'
 import { ApiKeyForm, LanguagePicker, ProfileForm } from '@/features/settings'
 import { Button, Card, Icon } from '@/ui'
 
@@ -84,7 +85,7 @@ export function OnboardingPage() {
           </h1>
           <p className="text-muted">{t('onboarding.keyHint')}</p>
           <Card>
-            <ApiKeyForm />
+            <ApiKeyForm withModelPicker />
           </Card>
           <Button block icon="check" onClick={() => void finish(false)}>
             {t('onboarding.start')}
@@ -100,6 +101,13 @@ export function OnboardingPage() {
             </Button>
           </Card>
           <p className="text-sm text-muted">{t('onboarding.noKeyNote')}</p>
+          <section aria-labelledby="ob-install" className="space-y-2 border-t border-line pt-4">
+            <h2 id="ob-install" className="font-bold">
+              {t('pwa.onboardingTitle')}
+            </h2>
+            <p className="text-sm text-muted">{t('pwa.cardBody')}</p>
+            <InstallCard compact />
+          </section>
         </section>
       )}
     </main>

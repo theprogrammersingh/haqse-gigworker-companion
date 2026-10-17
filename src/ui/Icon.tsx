@@ -63,6 +63,15 @@ const PATHS = {
   'trend-down': 'M22 17l-8.5-8.5-5 5L2 7M16 17h6v-6',
   sos: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 7v6M12 16.5h.01',
   undo: 'M3 7v6h6M21 17a9 9 0 0 0-15-6.7L3 13',
+  'share-ios': 'M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13',
+  'more-vertical':
+    'M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z',
+  menu: 'M4 6h16M4 12h16M4 18h16',
+  'plus-square':
+    'M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM12 8v8M8 12h8',
+  install: 'M12 3v12M7 10l5 5 5-5M5 21h14',
+  link: 'M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7',
+  smartphone: 'M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM12 18h.01',
 } as const
 
 export type IconName = keyof typeof PATHS

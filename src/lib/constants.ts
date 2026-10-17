@@ -52,3 +52,8 @@ export const STATE_MIN_HOURLY: Readonly<Record<string, number>> = {
 
 export const EMERGENCY_NUMBER = '112'
 export const GEMINI_KEY_URL = 'https://aistudio.google.com/apikey'
+
+/** Days before a dismissed install suggestion may show again. */
+export const INSTALL_NUDGE_DELAY_DAYS = 3
+/** How often an open app checks for a new deployed version. */
+export const UPDATE_CHECK_INTERVAL_MS = 60 * 60 * 1000

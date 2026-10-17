@@ -53,6 +53,13 @@ CI (`.github/workflows/deploy.yml`) runs audit, format:check, lint, typecheck, c
 
 **i18n:** `src/i18n/{en,hi,pa}.json`, each lazy-loaded. `src/i18n/i18n.test.ts` fails if a `t('key')` used in code is missing from `en.json`, or if `hi`/`pa` differ from `en` in keys or `{{placeholders}}`. Plurals use `_one`/`_other`. Dynamic key families (`enum.*`, `ai.error.<kind>.*`, `haq.check.<criterion>.<result>`, `suraksha.steps.<type>` arrays) must exist in all three files.
 
+## PWA
+
+- Service worker: `vite-plugin-pwa` in **prompt** mode (`injectRegister: false`). `src/app/PwaProvider.tsx` registers it through `useRegisterSW`, feeds `src/stores/pwa.ts` (`needRefresh`, `checkForUpdate`, `applyUpdate`) and checks hourly and on refocus. `features/install/UpdateBanner` asks the user before reloading.
+- Install: `src/app/installEvents.ts` captures `beforeinstallprompt`/`appinstalled` **at module load in `main.tsx`**. Startup awaits Dexie and i18n before React mounts, and Chrome can fire the event earlier than that. `lib/pwa/platform.ts` maps the user agent to an install method. `features/install` renders the one-tap button or the browser-specific steps (`pwa.steps.<method>.<n>` arrays in i18n).
+- `__APP_VERSION__`/`__BUILD_SHA__` are injected by `define` in `vite.config.ts` and declared in `src/vite-env.d.ts`.
+- E2E gotchas: once the service worker controls the page, mock Gemini with **`context.route`**. `page.route` can't see requests the worker makes. Mocks must use the REST shape (`supportedGenerationMethods`; the SDK maps it to `supportedActions`). Playwright can't intercept the worker's own update fetch, so the update test serves a temp copy of the build (`tests/e2e/deploy-server.ts`) and edits its `sw.js` on disk.
+
 ## Conventions and gotchas
 
 - React Compiler is on: no manual `useMemo`/`useCallback`. Lint enforces purity, so never call `Date.now()`/`new Date()` during render. Use `useNow`/`useHour`/`useToday` from `src/hooks/clock.ts`. Don't `setState` synchronously in effects; derive state instead.

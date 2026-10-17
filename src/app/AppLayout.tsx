@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useSettings } from '@/hooks'
 import { useSession } from '@/stores/session'
 import { Icon, Toaster } from '@/ui'
+import { UpdateBanner } from '@/features/install'
 import { BottomNav } from './BottomNav'
 
 const AssistantSheet = lazy(() =>
@@ -75,6 +76,7 @@ export function AppLayout() {
             </Link>
           </div>
         </div>
+        <UpdateBanner />
       </header>
 
       <main id="main" tabIndex={-1} className="mx-auto max-w-2xl px-4 py-4 outline-none">

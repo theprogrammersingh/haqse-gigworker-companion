@@ -1,6 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { useDocuments, useHour, useLedger, useProfile, useSchemes } from '@/hooks'
+import {
+  useDocuments,
+  useHour,
+  useLedger,
+  useNow,
+  useProfile,
+  useSchemes,
+  useSettings,
+} from '@/hooks'
+import { InstallCard, shouldShowInstallNudge, usePlatform } from '@/features/install'
 import { AnomalyCard } from '@/features/kamai'
 import { SosButton } from '@/features/suraksha'
 import { rankSchemes } from '@/lib/rules/eligibility'
@@ -8,6 +17,7 @@ import { expiringDocuments } from '@/lib/rules/expiry'
 import { hourlyFloor, isLowEarning } from '@/lib/rules/lowEarnings'
 import { shiftContext } from '@/lib/rules/shift'
 import type { Language } from '@/lib/schemas'
+import { updateSettings } from '@/lib/db'
 import { formatDate } from '@/lib/utils/date'
 import { localeFor } from '@/lib/utils/money'
 import { useSession } from '@/stores/session'
@@ -93,7 +103,10 @@ export function HomePage() {
   const schemes = useSchemes()
   const { weather, setPendingLogText } = useSession()
   const hour = useHour()
-  if (!ledger || !profile || !docs) return <Spinner />
+  const now = useNow()
+  const settings = useSettings()
+  const platform = usePlatform()
+  if (!ledger || !profile || !docs || !settings) return <Spinner />
 
   const { summary } = ledger
   const floor = hourlyFloor(profile)
@@ -105,6 +118,12 @@ export function HomePage() {
     lowEarning: low ? { netPerHour: summary.netPerHour, floor: floor.value } : null,
   })
   const shift = shiftContext(hour, weather)
+  const showInstall = shouldShowInstallNudge({
+    method: platform.method,
+    launchCount: settings.launchCount ?? 0,
+    dismissedAt: settings.installNudgeDismissedAt,
+    now,
+  })
 
   return (
     <>
@@ -147,6 +166,14 @@ export function HomePage() {
           alerts.map((a) => <AlertView key={a.kind} alert={a} />)
         )}
       </section>
+
+      {showInstall && (
+        <div className="mt-6">
+          <InstallCard
+            onDismiss={() => void updateSettings({ installNudgeDismissedAt: Date.now() })}
+          />
+        </div>
+      )}
 
       <div className="mt-6 grid grid-cols-2 gap-2">
         <LinkButton to="/shikayat" variant="secondary" icon="megaphone">

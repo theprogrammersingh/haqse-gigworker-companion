@@ -75,7 +75,10 @@
         "title": "Could not understand the answer",
         "body": "Nothing was saved. Try again or enter it by hand."
       },
-      "aborted": { "title": "Stopped", "body": "" },
+      "aborted": {
+        "title": "Stopped",
+        "body": ""
+      },
       "unknown": {
         "title": "AI did not answer",
         "body": "Try again in a moment."
@@ -161,7 +164,11 @@
       "labour": "Labour department",
       "police": "Police (non-emergency)"
     },
-    "status": { "draft": "Draft", "sent": "Sent", "resolved": "Resolved" }
+    "status": {
+      "draft": "Draft",
+      "sent": "Sent",
+      "resolved": "Resolved"
+    }
   },
   "onboarding": {
     "tagline": "Your work, your proof, your rights",
@@ -199,7 +206,11 @@
     "minHourlyHint": "We warn you when you earn less than this. Leave empty to use your state's reference.",
     "contacts": "Emergency contacts",
     "theme": "Display",
-    "themes": { "system": "Like phone", "light": "Light", "dark": "Dark" },
+    "themes": {
+      "system": "Like phone",
+      "light": "Light",
+      "dark": "Dark"
+    },
     "data": "Your data",
     "dataHint": "Everything stays on this phone. Nothing is uploaded except what you send to AI.",
     "export": "Download my data",
@@ -224,7 +235,11 @@
       "label": "AI model",
       "hint": "Only fast Flash models are listed.",
       "recommended": "recommended",
-      "refresh": "Refresh model list"
+      "refresh": "Refresh model list",
+      "hintNoKey": "Add a key to see every model your key can use. Your choice is saved now.",
+      "refreshed_one": "Found {{count}} model",
+      "refreshed_other": "Found {{count}} models",
+      "updated": "List updated {{time}}"
     }
   },
   "home": {
@@ -250,7 +265,12 @@
     "log": "Log earnings",
     "logTitle": "Log earnings",
     "logHow": "How do you want to log?",
-    "modes": { "voice": "Speak", "text": "Type", "photo": "Screenshot", "manual": "Form" },
+    "modes": {
+      "voice": "Speak",
+      "text": "Type",
+      "photo": "Screenshot",
+      "manual": "Form"
+    },
     "voiceHint": "Say it like: \"Aaj Zomato se 1400, petrol 250, 9 ghante\"",
     "voiceFallbackHint": "Tap the mic and speak, or type. Example: \"Zomato 1400 petrol 250 9 ghante\"",
     "saySomething": "What did you earn?",
@@ -281,7 +301,10 @@
     "trips": "Trips / orders",
     "takeHome": "Take-home",
     "addAnother": "Add another entry",
-    "errors": { "gross": "Enter the payout", "hours": "Enter hours between 0.25 and 24" },
+    "errors": {
+      "gross": "Enter the payout",
+      "hours": "Enter hours between 0.25 and 24"
+    },
     "saved_one": "Saved {{count}} entry",
     "saved_other": "Saved {{count}} entries",
     "lowPayoutToast": "This payout looks low compared to your usual.",
@@ -369,7 +392,10 @@
       }
     },
     "noCriteria": "Open to everyone.",
-    "level": { "central": "Central government scheme", "state": "State scheme" },
+    "level": {
+      "central": "Central government scheme",
+      "state": "State scheme"
+    },
     "whyTitle": "Why this result",
     "benefits": "What you get",
     "documents": "Papers you need",
@@ -481,7 +507,11 @@
     "heat": "It is very hot",
     "rain": "It is raining",
     "tipsFor": "Showing tips for: {{list}}",
-    "condition": { "night": "night", "heat": "heat", "rain": "rain" },
+    "condition": {
+      "night": "night",
+      "heat": "heat",
+      "rain": "rain"
+    },
     "incidents": "Incidents",
     "report": "Report an incident",
     "reportTitle": "Report an incident",
@@ -573,6 +603,88 @@
       "draftGrievance": "Start the complaint draft?",
       "addDocument": "Open documents to add this?",
       "showSafetyTips": "Show safety tips?"
+    }
+  },
+  "pwa": {
+    "sectionTitle": "App",
+    "onboardingTitle": "Install HaqSe (optional)",
+    "cardTitle": "Use HaqSe like an app",
+    "cardBody": "It opens from your home screen, works without internet and starts faster. It takes no extra storage.",
+    "install": "Install app",
+    "howToInstall": "How to install",
+    "notNow": "Not now",
+    "howTitle": "Install HaqSe",
+    "why": "Installing keeps everything on this phone. You can remove it like any app.",
+    "installedTitle": "HaqSe is installed",
+    "installedBody": "Open it from your home screen or app list.",
+    "installedToast": "HaqSe is installed. Open it from your home screen.",
+    "dismissedToast": "No problem. You can install later from Settings.",
+    "unsupportedTitle": "{{browser}} on a computer can’t install apps",
+    "unsupportedBody": "Open this page in Chrome or Edge to install it. You can also keep using HaqSe here; everything works.",
+    "copyLink": "Copy HaqSe link",
+    "linkCopied": "Link copied. Paste it in Chrome or Safari.",
+    "otherBrowsers": "Not your browser? Show other steps",
+    "intro": {
+      "chromium-menu": "These steps are for {{browser}}.",
+      "ios-share": "On iPhone and iPad, install from the Share menu.",
+      "samsung-menu": "These steps are for {{browser}}.",
+      "firefox-android-menu": "These steps are for {{browser}} on Android.",
+      "mac-safari-dock": "These steps are for {{browser}} on Mac.",
+      "open-in-browser": "Apps like WhatsApp or Instagram can’t install websites. Open HaqSe in your phone’s browser first."
+    },
+    "methodName": {
+      "chromium-menu": "Chrome, Edge or Opera",
+      "ios-share": "iPhone or iPad",
+      "samsung-menu": "Samsung Internet",
+      "firefox-android-menu": "Firefox on Android",
+      "mac-safari-dock": "Safari on Mac",
+      "open-in-browser": "Inside WhatsApp, Instagram or Facebook"
+    },
+    "steps": {
+      "chromium-menu": [
+        "Tap the menu ⋮ at the top right. On a computer, click the install icon at the right of the address bar.",
+        "Tap “Install app” or “Add to Home screen”.",
+        "Tap “Install”. HaqSe appears on your home screen."
+      ],
+      "ios-share": [
+        "Tap the Share button (a square with an arrow). In Safari it is at the bottom; on iPad and in other browsers it is at the top.",
+        "Scroll down and tap “Add to Home Screen”.",
+        "Tap “Add” at the top right."
+      ],
+      "samsung-menu": [
+        "Tap the menu ≡ at the bottom right.",
+        "Tap “Add page to”.",
+        "Choose “Home screen”, then tap “Add”."
+      ],
+      "firefox-android-menu": [
+        "Tap the menu ⋮.",
+        "Tap “Install” (or “Add to Home screen”).",
+        "Tap “Add” to confirm."
+      ],
+      "mac-safari-dock": [
+        "Click the “File” menu, or the Share button.",
+        "Choose “Add to Dock”.",
+        "Click “Add”. HaqSe opens from your Dock like any app."
+      ],
+      "open-in-browser": [
+        "Tap this app’s menu ⋮ or ⋯.",
+        "Choose “Open in browser” (or “Open in Chrome” / “Open in Safari”).",
+        "In the browser, open HaqSe and tap “Install app”."
+      ]
+    },
+    "offlineReady": "HaqSe is ready to work offline.",
+    "updateReady": "A new version of HaqSe is ready.",
+    "updateNow": "Update now",
+    "later": "Later",
+    "version": "Version",
+    "checkUpdates": "Check for updates",
+    "checking": "Checking…",
+    "updateHint": "HaqSe checks for updates by itself. When one is ready you’ll see “Update now” at the top. On iPhone, close and reopen the app after updating.",
+    "check": {
+      "updating": "Getting the new version…",
+      "up-to-date": "You have the latest version.",
+      "offline": "You are offline. Try again when connected.",
+      "unavailable": "Updates work once the app has loaded fully. Try again in a moment."
     }
   }
 }

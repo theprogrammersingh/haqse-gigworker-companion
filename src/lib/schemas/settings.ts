@@ -16,6 +16,10 @@ export interface Settings {
   theme: Theme
   dismissedAnomalies: string[]
   demoLoaded: boolean
+  /** When the Home install suggestion was last dismissed (ms). */
+  installNudgeDismissedAt?: number
+  /** Number of app opens, to delay the install suggestion until the second visit. */
+  launchCount?: number
 }
 
 export const defaultSettings = (): Settings => ({

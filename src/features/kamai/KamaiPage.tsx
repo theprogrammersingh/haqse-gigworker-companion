@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSearchParams } from 'react-router'
 import { useLedger, useProfile } from '@/hooks'
 import { hourlyFloor } from '@/lib/rules/lowEarnings'
 import { useSession } from '@/stores/session'
@@ -18,7 +19,10 @@ export function KamaiPage() {
   const { pendingLogText, setPendingLogText } = useSession()
   const [logOpen, setLogOpen] = useState(false)
   // Home and Saathi open the log by setting pendingLogText (possibly ''), so the sheet is derived from it.
-  const sheetOpen = logOpen || pendingLogText !== null
+  // The "Log earnings" app shortcut opens /kamai?log=1.
+  const [params, setParams] = useSearchParams()
+  const fromShortcut = params.get('log') === '1'
+  const sheetOpen = logOpen || pendingLogText !== null || fromShortcut
 
   if (!ledger || !profile) return <Spinner />
   const { summary, anomalies, entries } = ledger
@@ -79,6 +83,7 @@ export function KamaiPage() {
           onClose={() => {
             setLogOpen(false)
             setPendingLogText(null)
+            if (fromShortcut) setParams({}, { replace: true })
           }}
         />
       )}

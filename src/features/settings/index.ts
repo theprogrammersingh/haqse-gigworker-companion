@@ -1,5 +1,6 @@
 export { ApiKeyForm } from './components/ApiKeyForm'
 export { setLanguage } from './components/language'
 export { LanguagePicker } from './components/LanguagePicker'
+export { ModelPicker } from './components/ModelPicker'
 export { ProfileForm } from './components/ProfileForm'
 export { SettingsPage } from './SettingsPage'

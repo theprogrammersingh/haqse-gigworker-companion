@@ -69,6 +69,26 @@ Before any AI call, a pure `buildContext()` builds a compact summary (≤ 1.5 KB
 
 **Gemini usage:** stateless `generateContent` only; `responseJsonSchema` from Zod and re-validation with Zod on every structured answer; `thinkingLevel` (`low`/`medium`) and no sampling parameters; one jittered retry on 429/5xx; automatic fall-through when a model is retired; `AbortController` on screen exit; a 24 h response cache for explanations and a per-week cache for summaries.
 
+## Install and updates (PWA)
+
+HaqSe installs like an app from any modern browser, and the app shows the right way for the browser the worker is using. Detection is in `src/lib/pwa/platform.ts`, tested against 15 real user agents.
+
+| Browser                                | How HaqSe helps you install                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------------------- |
+| Chrome, Edge, Opera, Samsung (Android/desktop) | One-tap **Install app** button (native `beforeinstallprompt`)               |
+| Same browsers before the prompt is ready | Steps: menu ⋮ → "Install app" / "Add to Home screen"                            |
+| Safari, Chrome, Firefox or Edge on iPhone/iPad | Steps with pictures: Share → "Add to Home Screen" → Add                     |
+| Samsung Internet                       | Steps: menu ≡ → "Add page to" → "Home screen"                                       |
+| Firefox on Android                     | Steps: menu ⋮ → "Install"                                                           |
+| Safari on Mac                          | Steps: File → "Add to Dock"                                                         |
+| WhatsApp / Instagram / Facebook browser | "Open in your browser first", with a copy-link button                              |
+| Firefox on a computer                  | Explains it can't install; suggests Chrome or Edge; the website keeps working       |
+
+- **Where:** a dismissible suggestion on Home from the second visit (back after 3 days if dismissed, never once installed), a step in onboarding, and **Settings → App**.
+- **App manifest:** it includes `id`, a maskable icon, screenshots for Chrome's richer install sheet, and shortcuts (**Log earnings**, **SOS**, **Complaints**) for long-pressing the app icon.
+- **Updates:** a new deploy never interrupts the worker. The open app checks hourly and whenever it is brought back to the screen. When a new version is ready, a bar appears at the top with **Update now** and **Later**. **Settings → App** shows the version and commit, plus **Check for updates**. Your data lives in IndexedDB, so it is kept across updates. On iPhone, close and reopen the app after updating.
+- **Offline:** the app shell and data files are precached. The app opens and every non-AI feature works with no connection.
+
 ## Assumptions
 
 1. Workers use an Android phone with a modern Chromium browser and patchy internet.

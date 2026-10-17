@@ -21,3 +21,9 @@ export async function dismissAnomaly(entryId: string): Promise<void> {
   if (!s.dismissedAnomalies.includes(entryId))
     await updateSettings({ dismissedAnomalies: [...s.dismissedAnomalies, entryId] })
 }
+
+/** Counts app opens (used to delay the install suggestion to the second visit). */
+export async function recordLaunch(): Promise<void> {
+  const s = await getSettings()
+  await updateSettings({ launchCount: (s.launchCount ?? 0) + 1 })
+}

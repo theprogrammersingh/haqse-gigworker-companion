@@ -4,19 +4,28 @@ import { listFlashModels, DEFAULT_MODEL } from '@/lib/ai/models'
 import { GEMINI_KEY_URL } from '@/lib/constants'
 import { removeApiKey, updateSettings } from '@/lib/db'
 import { useSettings } from '@/hooks'
-import { AlertCard, Button, Icon, SelectField, TextField } from '@/ui'
+import { AlertCard, Button, Icon, TextField } from '@/ui'
 import { toast } from '@/stores/toast'
+import { ModelPicker } from './ModelPicker'
 
 type Status = { kind: 'idle' } | { kind: 'checking' } | { kind: 'error'; message: string }
 
-/** Paste → validate with a real call → pick a Flash model (PRD FR-3). */
-export function ApiKeyForm({ onDone }: { onDone?: () => void }) {
+/**
+ * Paste → validate with a real call → save (PRD FR-3). `withModelPicker` shows the
+ * model choice right after a key validates (onboarding); Settings shows it separately.
+ */
+export function ApiKeyForm({
+  onDone,
+  withModelPicker = false,
+}: {
+  onDone?: () => void
+  withModelPicker?: boolean
+}) {
   const { t } = useTranslation()
   const settings = useSettings()
   const [key, setKey] = useState('')
   const [status, setStatus] = useState<Status>({ kind: 'idle' })
   const hasKey = !!settings?.apiKey
-  const models = settings?.modelList?.models ?? []
 
   const validate = async (value: string): Promise<void> => {
     setStatus({ kind: 'checking' })
@@ -38,10 +47,6 @@ export function ApiKeyForm({ onDone }: { onDone?: () => void }) {
     onDone?.()
   }
 
-  const refresh = async (): Promise<void> => {
-    if (settings?.apiKey) await validate(settings.apiKey)
-  }
-
   if (hasKey) {
     return (
       <div className="space-y-4">
@@ -51,27 +56,8 @@ export function ApiKeyForm({ onDone }: { onDone?: () => void }) {
             <span className="font-mono">••••{settings.apiKey?.slice(-4)}</span>
           </p>
         </AlertCard>
-        {models.length > 0 && (
-          <SelectField
-            label={t('settings.model.label')}
-            hint={t('settings.model.hint')}
-            value={settings.model ?? ''}
-            onValueChange={(model) => void updateSettings({ model })}
-            options={models.map((m, i) => ({
-              value: m,
-              label: i === 0 ? `${m} (${t('settings.model.recommended')})` : m,
-            }))}
-          />
-        )}
+        {withModelPicker && <ModelPicker showEconomy={false} />}
         <div className="flex flex-wrap gap-2">
-          <Button
-            variant="secondary"
-            icon="refresh"
-            onClick={refresh}
-            disabled={status.kind === 'checking'}
-          >
-            {t('settings.model.refresh')}
-          </Button>
           <Button
             variant="secondary"
             icon="trash"

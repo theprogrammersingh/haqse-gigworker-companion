@@ -4,9 +4,9 @@ import { expect, type Page } from '@playwright/test'
 const require = createRequire(import.meta.url)
 const AXE_PATH = require.resolve('axe-core/axe.min.js')
 
-/** Onboards with demo data (FR-4) and lands on Home. */
-export async function startWithDemo(page: Page): Promise<void> {
-  await page.goto('/')
+/** Onboards with demo data (FR-4) and lands on Home. `origin` targets another server. */
+export async function startWithDemo(page: Page, origin = ''): Promise<void> {
+  await page.goto(`${origin}/`)
   await expect(page.getByRole('heading', { name: 'Choose your language' })).toBeVisible()
   await page.getByRole('button', { name: 'Next' }).click()
   await page.getByRole('button', { name: 'Skip' }).click()

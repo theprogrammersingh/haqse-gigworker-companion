@@ -75,7 +75,10 @@
         "title": "जवाब समझ नहीं आया",
         "body": "कुछ भी सेव नहीं हुआ। फिर से कोशिश करें या हाथ से भरें।"
       },
-      "aborted": { "title": "रोक दिया", "body": "" },
+      "aborted": {
+        "title": "रोक दिया",
+        "body": ""
+      },
       "unknown": {
         "title": "AI ने जवाब नहीं दिया",
         "body": "थोड़ी देर बाद फिर कोशिश करें।"
@@ -161,7 +164,11 @@
       "labour": "श्रम विभाग",
       "police": "पुलिस (गैर-आपातकालीन)"
     },
-    "status": { "draft": "मसौदा", "sent": "भेजा", "resolved": "सुलझ गया" }
+    "status": {
+      "draft": "मसौदा",
+      "sent": "भेजा",
+      "resolved": "सुलझ गया"
+    }
   },
   "onboarding": {
     "tagline": "आपका काम, आपका सबूत, आपका हक़",
@@ -199,7 +206,11 @@
     "minHourlyHint": "इससे कम कमाई पर हम बताएँगे। खाली छोड़ें तो आपके राज्य का संदर्भ लगेगा।",
     "contacts": "आपातकालीन संपर्क",
     "theme": "डिस्प्ले",
-    "themes": { "system": "फ़ोन जैसा", "light": "हल्का", "dark": "गहरा" },
+    "themes": {
+      "system": "फ़ोन जैसा",
+      "light": "हल्का",
+      "dark": "गहरा"
+    },
     "data": "आपका डेटा",
     "dataHint": "सब कुछ इसी फ़ोन में रहता है। AI को भेजी गई चीज़ों के अलावा कुछ अपलोड नहीं होता।",
     "export": "मेरा डेटा डाउनलोड करें",
@@ -224,7 +235,11 @@
       "label": "AI मॉडल",
       "hint": "सिर्फ़ तेज़ Flash मॉडल दिखाए गए हैं।",
       "recommended": "सुझाया गया",
-      "refresh": "मॉडल सूची फिर से लाएँ"
+      "refresh": "मॉडल सूची फिर से लाएँ",
+      "hintNoKey": "आपकी की से मिलने वाले सभी मॉडल देखने के लिए की जोड़ें। आपकी पसंद अभी सेव हो जाती है।",
+      "refreshed_one": "{{count}} मॉडल मिला",
+      "refreshed_other": "{{count}} मॉडल मिले",
+      "updated": "सूची {{time}} को अपडेट हुई"
     }
   },
   "home": {
@@ -250,7 +265,12 @@
     "log": "कमाई लिखें",
     "logTitle": "कमाई लिखें",
     "logHow": "कैसे लिखना चाहते हैं?",
-    "modes": { "voice": "बोलें", "text": "लिखें", "photo": "स्क्रीनशॉट", "manual": "फ़ॉर्म" },
+    "modes": {
+      "voice": "बोलें",
+      "text": "लिखें",
+      "photo": "स्क्रीनशॉट",
+      "manual": "फ़ॉर्म"
+    },
     "voiceHint": "ऐसे बोलें: \"आज Zomato से 1400, पेट्रोल 250, 9 घंटे\"",
     "voiceFallbackHint": "माइक दबाकर बोलें या लिखें। जैसे: \"Zomato 1400 पेट्रोल 250 9 घंटे\"",
     "saySomething": "आपने कितना कमाया?",
@@ -281,7 +301,10 @@
     "trips": "ट्रिप / ऑर्डर",
     "takeHome": "हाथ में आया",
     "addAnother": "एक और एंट्री जोड़ें",
-    "errors": { "gross": "पेमेंट भरें", "hours": "0.25 से 24 के बीच घंटे भरें" },
+    "errors": {
+      "gross": "पेमेंट भरें",
+      "hours": "0.25 से 24 के बीच घंटे भरें"
+    },
     "saved_one": "{{count}} एंट्री सेव हुई",
     "saved_other": "{{count}} एंट्री सेव हुईं",
     "lowPayoutToast": "यह पेमेंट आपकी आम कमाई से कम लग रहा है।",
@@ -369,7 +392,10 @@
       }
     },
     "noCriteria": "सबके लिए खुली है।",
-    "level": { "central": "केंद्र सरकार की योजना", "state": "राज्य की योजना" },
+    "level": {
+      "central": "केंद्र सरकार की योजना",
+      "state": "राज्य की योजना"
+    },
     "whyTitle": "यह नतीजा क्यों",
     "benefits": "आपको क्या मिलेगा",
     "documents": "ज़रूरी काग़ज़",
@@ -481,7 +507,11 @@
     "heat": "बहुत गर्मी है",
     "rain": "बारिश हो रही है",
     "tipsFor": "इनके लिए सुझाव: {{list}}",
-    "condition": { "night": "रात", "heat": "गर्मी", "rain": "बारिश" },
+    "condition": {
+      "night": "रात",
+      "heat": "गर्मी",
+      "rain": "बारिश"
+    },
     "incidents": "घटनाएँ",
     "report": "घटना दर्ज करें",
     "reportTitle": "घटना दर्ज करें",
@@ -573,6 +603,88 @@
       "draftGrievance": "शिकायत का मसौदा शुरू करें?",
       "addDocument": "जोड़ने के लिए काग़ज़ खोलें?",
       "showSafetyTips": "सुरक्षा सुझाव दिखाएँ?"
+    }
+  },
+  "pwa": {
+    "sectionTitle": "ऐप",
+    "onboardingTitle": "HaqSe इंस्टॉल करें (ज़रूरी नहीं)",
+    "cardTitle": "HaqSe को ऐप की तरह इस्तेमाल करें",
+    "cardBody": "यह होम स्क्रीन से खुलता है, बिना इंटरनेट चलता है और जल्दी शुरू होता है। इसमें अलग से जगह नहीं लगती।",
+    "install": "ऐप इंस्टॉल करें",
+    "howToInstall": "इंस्टॉल कैसे करें",
+    "notNow": "अभी नहीं",
+    "howTitle": "HaqSe इंस्टॉल करें",
+    "why": "इंस्टॉल करने पर भी सब कुछ इसी फ़ोन में रहता है। इसे किसी भी ऐप की तरह हटा सकते हैं।",
+    "installedTitle": "HaqSe इंस्टॉल है",
+    "installedBody": "इसे होम स्क्रीन या ऐप सूची से खोलें।",
+    "installedToast": "HaqSe इंस्टॉल हो गया। इसे होम स्क्रीन से खोलें।",
+    "dismissedToast": "कोई बात नहीं। बाद में सेटिंग्स से इंस्टॉल कर सकते हैं।",
+    "unsupportedTitle": "कंप्यूटर पर {{browser}} ऐप इंस्टॉल नहीं कर सकता",
+    "unsupportedBody": "इंस्टॉल करने के लिए यह पेज Chrome या Edge में खोलें। आप यहीं HaqSe इस्तेमाल करते रह सकते हैं; सब कुछ चलता है।",
+    "copyLink": "HaqSe लिंक कॉपी करें",
+    "linkCopied": "लिंक कॉपी हो गया। इसे Chrome या Safari में पेस्ट करें।",
+    "otherBrowsers": "आपका ब्राउज़र नहीं? दूसरे तरीके देखें",
+    "intro": {
+      "chromium-menu": "ये कदम {{browser}} के लिए हैं।",
+      "ios-share": "iPhone और iPad पर शेयर मेन्यू से इंस्टॉल करें।",
+      "samsung-menu": "ये कदम {{browser}} के लिए हैं।",
+      "firefox-android-menu": "ये कदम Android पर {{browser}} के लिए हैं।",
+      "mac-safari-dock": "ये कदम Mac पर {{browser}} के लिए हैं।",
+      "open-in-browser": "WhatsApp या Instagram जैसे ऐप वेबसाइट इंस्टॉल नहीं कर सकते। पहले HaqSe को फ़ोन के ब्राउज़र में खोलें।"
+    },
+    "methodName": {
+      "chromium-menu": "Chrome, Edge या Opera",
+      "ios-share": "iPhone या iPad",
+      "samsung-menu": "Samsung Internet",
+      "firefox-android-menu": "Android पर Firefox",
+      "mac-safari-dock": "Mac पर Safari",
+      "open-in-browser": "WhatsApp, Instagram या Facebook के अंदर"
+    },
+    "steps": {
+      "chromium-menu": [
+        "ऊपर दाईं ओर मेन्यू ⋮ दबाएँ। कंप्यूटर पर एड्रेस बार के दाईं ओर इंस्टॉल आइकन दबाएँ।",
+        "“Install app” या “Add to Home screen” दबाएँ।",
+        "“Install” दबाएँ। HaqSe आपकी होम स्क्रीन पर आ जाएगा।"
+      ],
+      "ios-share": [
+        "शेयर बटन (तीर वाला चौकोर) दबाएँ। Safari में यह नीचे है; iPad और दूसरे ब्राउज़र में ऊपर।",
+        "नीचे स्क्रॉल करें और “Add to Home Screen” दबाएँ।",
+        "ऊपर दाईं ओर “Add” दबाएँ।"
+      ],
+      "samsung-menu": [
+        "नीचे दाईं ओर मेन्यू ≡ दबाएँ।",
+        "“Add page to” दबाएँ।",
+        "“Home screen” चुनें, फिर “Add” दबाएँ।"
+      ],
+      "firefox-android-menu": [
+        "मेन्यू ⋮ दबाएँ।",
+        "“Install” (या “Add to Home screen”) दबाएँ।",
+        "पुष्टि के लिए “Add” दबाएँ।"
+      ],
+      "mac-safari-dock": [
+        "“File” मेन्यू या शेयर बटन पर क्लिक करें।",
+        "“Add to Dock” चुनें।",
+        "“Add” पर क्लिक करें। HaqSe Dock से किसी भी ऐप की तरह खुलेगा।"
+      ],
+      "open-in-browser": [
+        "इस ऐप का मेन्यू ⋮ या ⋯ दबाएँ।",
+        "“Open in browser” (या “Open in Chrome” / “Open in Safari”) चुनें।",
+        "ब्राउज़र में HaqSe खोलें और “ऐप इंस्टॉल करें” दबाएँ।"
+      ]
+    },
+    "offlineReady": "HaqSe अब बिना इंटरनेट चलने के लिए तैयार है।",
+    "updateReady": "HaqSe का नया वर्ज़न तैयार है।",
+    "updateNow": "अभी अपडेट करें",
+    "later": "बाद में",
+    "version": "वर्ज़न",
+    "checkUpdates": "अपडेट देखें",
+    "checking": "देख रहे हैं…",
+    "updateHint": "HaqSe अपने आप अपडेट देखता है। नया वर्ज़न तैयार होने पर ऊपर “अभी अपडेट करें” दिखेगा। iPhone पर अपडेट के बाद ऐप बंद करके फिर खोलें।",
+    "check": {
+      "updating": "नया वर्ज़न आ रहा है…",
+      "up-to-date": "आपके पास सबसे नया वर्ज़न है।",
+      "offline": "आप ऑफ़लाइन हैं। इंटरनेट आने पर फिर कोशिश करें।",
+      "unavailable": "ऐप पूरा लोड होने के बाद अपडेट काम करता है। थोड़ी देर में फिर कोशिश करें।"
     }
   }
 }

@@ -14,9 +14,11 @@ import type { Theme } from '@/lib/schemas'
 import { downloadText } from '@/lib/utils/share'
 import { ContactsEditor } from '@/features/suraksha'
 import { toast } from '@/stores/toast'
-import { Button, Card, ChipGroup, NumberField, PageHeader, SectionTitle, Sheet, Switch } from '@/ui'
+import { AppStatus } from '@/features/install'
+import { Button, Card, ChipGroup, NumberField, PageHeader, SectionTitle, Sheet } from '@/ui'
 import { ApiKeyForm } from './components/ApiKeyForm'
 import { LanguagePicker } from './components/LanguagePicker'
+import { ModelPicker } from './components/ModelPicker'
 import { ProfileForm } from './components/ProfileForm'
 
 const THEMES: Theme[] = ['system', 'light', 'dark']
@@ -40,12 +42,14 @@ export function SettingsPage() {
       <SectionTitle id="ai">{t('settings.ai')}</SectionTitle>
       <Card className="space-y-4">
         <ApiKeyForm />
-        <Switch
-          label={t('settings.economy')}
-          hint={t('settings.economyHint')}
-          checked={settings.economyMode}
-          onChange={(economyMode) => void updateSettings({ economyMode })}
-        />
+      </Card>
+      <Card className="mt-3">
+        <ModelPicker />
+      </Card>
+
+      <SectionTitle id="app">{t('pwa.sectionTitle')}</SectionTitle>
+      <Card>
+        <AppStatus />
       </Card>
 
       <SectionTitle>{t('settings.profile')}</SectionTitle>

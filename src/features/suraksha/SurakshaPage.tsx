@@ -14,7 +14,7 @@ import type { Condition } from '@/lib/rules/shift'
 
 export function SurakshaPage() {
   const { t } = useTranslation()
-  const [params] = useSearchParams()
+  const [params, setParams] = useSearchParams()
   const profile = useProfile()
   const incidents = useIncidents()
   const weather = useSession((s) => s.weather)
@@ -33,7 +33,11 @@ export function SurakshaPage() {
   return (
     <>
       <PageHeader title={t('suraksha.title')} subtitle={t('suraksha.subtitle')} />
-      <SosButton prominent={shift.sosProminent} />
+      <SosButton
+        prominent={shift.sosProminent}
+        startConfirming={params.get('sos') === '1'}
+        onSettled={() => params.has('sos') && setParams({}, { replace: true })}
+      />
 
       <SectionTitle>{t('suraksha.tips')}</SectionTitle>
       <SafetyTips conditions={conditions} vehicle={profile.vehicle} />

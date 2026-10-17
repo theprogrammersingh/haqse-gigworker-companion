@@ -4,7 +4,11 @@ import { RouterProvider } from 'react-router'
 import './index.css'
 import { router } from './app/router'
 import { initI18n } from './i18n'
-import { getProfile, pruneCache } from './lib/db'
+import { listenForInstallEvents } from './app/installEvents'
+import { PwaProvider } from './app/PwaProvider'
+import { getProfile, pruneCache, recordLaunch } from './lib/db'
+
+listenForInstallEvents()
 
 async function start(): Promise<void> {
   const profile = await getProfile().catch(() => undefined)
@@ -13,10 +17,13 @@ async function start(): Promise<void> {
   if (!root) return
   createRoot(root).render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <PwaProvider>
+        <RouterProvider router={router} />
+      </PwaProvider>
     </StrictMode>,
   )
   void pruneCache().catch(() => undefined)
+  void recordLaunch().catch(() => undefined)
 }
 
 void start()

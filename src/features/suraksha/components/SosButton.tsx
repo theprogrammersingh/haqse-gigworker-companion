@@ -8,9 +8,25 @@ import { SosSheet } from './SosSheet'
  * SOS: press and hold to open help immediately, or tap and confirm.
  * The confirm path is the single-pointer alternative to the gesture (WCAG 2.5.1).
  */
-export function SosButton({ prominent }: { prominent?: boolean }) {
+export function SosButton({
+  prominent,
+  startConfirming,
+  onSettled,
+}: {
+  prominent?: boolean
+  /** Open the confirm step on mount (the "SOS" app shortcut). */
+  startConfirming?: boolean
+  /** Called when the SOS flow returns to idle. */
+  onSettled?: () => void
+}) {
   const { t } = useTranslation()
-  const [stage, setStage] = useState<'idle' | 'confirm' | 'open'>('idle')
+  const [stage, setStageState] = useState<'idle' | 'confirm' | 'open'>(() =>
+    startConfirming ? 'confirm' : 'idle',
+  )
+  const setStage = (s: 'idle' | 'confirm' | 'open'): void => {
+    setStageState(s)
+    if (s === 'idle') onSettled?.()
+  }
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const held = useRef(false)
 

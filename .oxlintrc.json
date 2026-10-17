@@ -26,7 +26,13 @@
     ],
     "eqeqeq": "error",
     "import/no-unassigned-import": "off",
-    "import/no-named-as-default-member": "off"
+    "import/no-named-as-default-member": "off",
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allow": ["__APP_VERSION__", "__BUILD_SHA__"]
+      }
+    ]
   },
   "ignorePatterns": [
     "dist",
