@@ -2,7 +2,7 @@
 
 **HaqSe** ("by right") is a local-first, installable web app that turns a gig worker's own work data into real earnings insight, matched welfare schemes, ready documents and ready-to-send complaints, in English, Hindi or Punjabi. It uses Google Gemini as its reasoning layer.
 
-**Live:** https://haq-se.programmersingh.dev
+**Live:** https://theprogrammersingh.github.io/haqse-gigworker-companion/ (moving to https://haq-se.programmersingh.dev once its DNS is set up)
 
 <img src="docs/screenshot.jpg" alt="HaqSe home screen: today's take-home ₹690, a Zomato payout-drop alert with a Draft complaint button, and the bottom navigation" width="300">
 
